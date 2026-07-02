@@ -409,23 +409,6 @@ html[data-theme="light"] .wordmark-logo {
   animation: scaleX 1100ms ease 1800ms forwards;
 }
 
-.tagline {
-  font-family: var(--font-display);
-  font-weight: 400;
-  font-size: clamp(1.15rem, 1.6vw, 1.4rem);
-  line-height: 1.6;
-  color: var(--text-strong);
-  margin-bottom: 1.1rem;
-  text-shadow: var(--shadow-lede);
-}
-
-.tagline em {
-  font-style: italic;
-  color: var(--purple-2);
-}
-
-html[data-theme="dark"] .tagline em { color: var(--gold-light) }
-
 .lede {
   font-family: var(--font-display);
   font-weight: 400;
