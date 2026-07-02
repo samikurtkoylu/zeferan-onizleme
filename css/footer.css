@@ -1,0 +1,148 @@
+/* ===================================
+   FOOTER
+   =================================== */
+
+.footer {
+  padding: 2rem 3rem;
+  border-top: 1px solid var(--dark-border);
+  background: var(--black);
+}
+
+.footer-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 2rem;
+}
+
+.footer-logo {
+  display: flex;
+  align-items: center;
+}
+
+.footer-logo-img {
+  height: 44px;
+  width: auto;
+}
+
+.footer-main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+  max-width: 760px;
+  align-items: center;
+  text-align: center;
+}
+
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem 2rem;
+  justify-content: center;
+  width: 100%;
+}
+
+.footer-links a {
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--text-dim);
+  transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: var(--gold);
+}
+
+.footer-links a.footer-link-whatsapp:hover {
+  color: #25d366;
+}
+
+.footer-contact {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  align-items: center;
+}
+
+.footer-contact-line {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  margin: 0;
+  font-size: 0.72rem;
+  line-height: 1.5;
+  color: var(--text-dim);
+  justify-content: center;
+  text-align: center;
+}
+
+.footer-contact-sep {
+  color: var(--text-muted);
+}
+
+.footer-contact-label {
+  font-size: 0.62rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--text-muted);
+}
+
+.footer-contact-value,
+.footer-contact-link {
+  color: var(--text-dim);
+}
+
+.footer-contact-link {
+  transition: color 0.3s ease;
+}
+
+.footer-contact-link:hover {
+  color: var(--gold);
+}
+
+.footer-copy {
+  font-size: 0.7rem;
+  color: var(--text-dim);
+  max-width: 180px;
+  line-height: 1.6;
+  text-align: right;
+}
+
+.footer-legal {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  margin: 0.4rem 0 0;
+  font-size: 0.7rem;
+  line-height: 1.5;
+  color: var(--text-dim);
+  justify-content: center;
+  text-align: center;
+}
+
+.footer-legal a,
+.footer-cookie-link {
+  color: var(--text-dim);
+  background: none;
+  border: none;
+  padding: 0;
+  font: inherit;
+  cursor: pointer;
+  transition: color 0.3s ease;
+  text-decoration: none;
+}
+
+.footer-legal a:hover,
+.footer-cookie-link:hover {
+  color: var(--gold);
+}
+
+.footer-cookie-link:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 2px;
+  border-radius: 2px;
+}

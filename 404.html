@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8"><meta name="robots" content="noindex, nofollow"><title>Zeferan</title>
+<script>
+(function(){
+  var parts = location.pathname.split('/').filter(Boolean);
+  var base = '/' + (parts[0] || '') + '/';
+  var rest = parts.slice(1);
+  var langs = {en:1,eng:1,az:1,ru:1,tr:1};
+  if (rest.length && langs[rest[0].toLowerCase()]) rest = rest.slice(1);
+  var map = {'': 'index.html', 'menu':'menu.html', 'menu.html':'menu.html',
+             'privacy':'privacy.html','kvkk':'kvkk.html','gateway':'gateway/'};
+  var key = (rest[0]||'').toLowerCase();
+  location.replace(base + (map[key] || 'index.html'));
+})();
+</script></head><body></body></html>

@@ -1,0 +1,862 @@
+/* ──────────────────────────────────────────────────────────────────
+   ZEFERAN — GATEWAY (static HTML)
+   Palette, typography, and motion mirror the Zeferan Sultanahmet site.
+   Dual-theme (light default, dark) driven by [data-theme] on <html>.
+   ────────────────────────────────────────────────────────────────── */
+
+:root {
+  /* ── Brand constants (unchanged across themes) ── */
+  --gold:         #C4A265;
+  --gold-light:   #D4B87A;
+  --gold-dark:    #A68B52;
+  --purple:       #1E0A2E;
+  --purple-2:     #3D1A5C;
+  --clay:         #3b2416;
+  --clay-2:       #7a553a;
+  --black:        #0A0A0A;
+  --cream:        #F5F0E8;
+  --cream-dim:    #D4CFC7;
+
+  /* Type */
+  --font-display: 'Playfair Display', Georgia, 'Times New Roman', serif;
+  --font-sans:    'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+
+  /* Motion */
+  --ease:         cubic-bezier(0.19, 1, 0.22, 1);
+  --ease-drawer:  cubic-bezier(0.32, 0.72, 0, 1);
+}
+
+/* ── DARK theme ── */
+html[data-theme="dark"] {
+  --bg:                  #0A0A0A;
+  --bg-elevated:         #111111;
+  --surface:             #141210;
+  --border:              #2A2A2A;
+
+  --text:                #E8E3DB;
+  --text-strong:         #F5F0E8;
+  --text-dim:            #8A857D;
+  --muted:               #D4CFC7;
+
+  --logo-color:          var(--gold);
+
+  --hero-overlay-a:      rgba(30, 10, 46, 0.28);
+  --hero-overlay-b:      rgba(122, 85, 58, 0.22);
+  --aurora-gold:         rgba(196, 162, 101, 0.55);
+  --aurora-purple:       rgba(61, 26, 92, 0.65);
+  --aurora-clay:         rgba(122, 85, 58, 0.5);
+  --aurora-gold-opacity: 0.55;
+  --aurora-blur:         110px;
+  --grain-opacity:       0.07;
+
+  --cta-text:            var(--cream);
+  --cta-hover-bg:        var(--gold);
+  --cta-hover-text:      var(--black);
+
+  --drawer-bg-glow:      rgba(196, 162, 101, 0.08);
+  --drawer-backdrop:     rgba(6, 4, 2, 0.58);
+  --drawer-backdrop-blur: 10px;
+  --shadow-lede:         0 1px 10px rgba(0, 0, 0, 0.6);
+
+  color-scheme: dark;
+}
+
+/* ── LIGHT theme (default) ── */
+html,
+html[data-theme="light"] {
+  --bg:                  #F5F0E8;   /* warm cream */
+  --bg-elevated:         #FAF6EE;
+  --surface:             #FFFFFF;
+  --border:              #D8CDB8;
+
+  --text:                #3A2F1F;   /* warm ink */
+  --text-strong:         #1F1710;
+  --text-dim:            #7A6F5C;
+  --muted:               #2B2216;
+
+  --logo-color:          var(--purple-2);   /* user request: purple logo in light mode */
+
+  --hero-overlay-a:      rgba(61, 26, 92, 0.10);
+  --hero-overlay-b:      rgba(122, 85, 58, 0.10);
+  --aurora-gold:         rgba(196, 162, 101, 0.38);
+  --aurora-purple:       rgba(61, 26, 92, 0.16);
+  --aurora-clay:         rgba(122, 85, 58, 0.18);
+  --aurora-gold-opacity: 0.6;
+  --aurora-blur:         120px;
+  --grain-opacity:       0.04;
+
+  --cta-text:            var(--text-strong);
+  --cta-hover-bg:        var(--purple-2);    /* light-mode hover fill: mor */
+  --cta-hover-text:      #C9A27A;            /* light-mode hover text: kil kremi (reads on purple) */
+
+  --drawer-bg-glow:      rgba(196, 162, 101, 0.10);
+  --drawer-backdrop:     rgba(20, 15, 8, 0.32);
+  --drawer-backdrop-blur: 8px;
+  --shadow-lede:         none;
+
+  color-scheme: light;
+}
+
+/* ── Reset ── */
+
+*,
+*::before,
+*::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html, body {
+  height: 100%;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transition: background-color 450ms ease, color 450ms ease;
+}
+
+a       { color: inherit; text-decoration: none; }
+button  { font: inherit; color: inherit; background: none; border: 0; cursor: pointer; }
+img     { display: block; max-width: 100%; }
+
+/* ─────────────── Gateway shell ─────────────── */
+
+.gateway {
+  position: relative;
+  min-height: 100dvh;
+  overflow-x: hidden;
+  animation: pageIn 2200ms ease-out both;
+}
+
+@keyframes pageIn  { from { opacity: 0 } to { opacity: 1 } }
+@keyframes fadeUp  { from { opacity: 0; transform: translateY(28px) } to { opacity: 1; transform: translateY(0) } }
+@keyframes scaleX  { from { opacity: 0; transform: scaleX(0) } to { opacity: 1; transform: scaleX(1) } }
+
+/* ─────────────── Top / bottom chrome ─────────────── */
+
+.topbar,
+.footer {
+  position: absolute;
+  left: 0; right: 0;
+  z-index: 30;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: 1.75rem 2.75rem;
+  pointer-events: none;
+  color: var(--text-strong);
+}
+
+.topbar { top: 0 }
+.footer { bottom: 0; justify-content: center }
+
+.topbar-right {
+  display: inline-flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.meta,
+.footer > span {
+  font-family: var(--font-sans);
+  font-weight: 500;
+  font-size: 0.62rem;
+  letter-spacing: 0.42em;
+  text-transform: uppercase;
+  padding-left: 0.42em;
+  color: var(--text-dim);
+}
+
+/* ─────────────── Language switcher ─────────────── */
+
+.langs {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  pointer-events: auto;
+}
+
+.lang-btn {
+  border: 0;
+  border-bottom: 1px solid transparent;
+  padding: 0.35rem 0.2rem;
+  padding-left: calc(0.2rem + 0.32em);
+  font-size: 0.62rem;
+  font-weight: 500;
+  letter-spacing: 0.32em;
+  text-transform: uppercase;
+  color: var(--text-dim);
+  transition: color 350ms ease, border-color 350ms ease;
+}
+
+.lang-btn:hover           { color: var(--text-strong) }
+.lang-btn--active         { color: var(--gold); border-bottom-color: currentColor }
+.lang-btn--active:hover   { color: var(--gold-light) }
+
+.lang-dot {
+  font-size: 0.55rem;
+  color: var(--text-dim);
+  opacity: 0.55;
+  padding-bottom: 0.1em;
+}
+
+/* ─────────────── Theme toggle ─────────────── */
+
+.theme-toggle {
+  pointer-events: auto;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 1.9rem;
+  height: 1.9rem;
+  border: 1px solid transparent;
+  border-radius: 999px;
+  color: var(--text-dim);
+  transition: color 350ms ease, border-color 350ms ease, transform 500ms var(--ease), background-color 350ms ease;
+}
+
+.theme-toggle:hover {
+  color: var(--gold);
+  border-color: var(--border);
+}
+
+.theme-toggle:focus-visible {
+  outline: none;
+  border-color: var(--gold);
+}
+
+.theme-toggle .icon-sun,
+.theme-toggle .icon-moon {
+  width: 14px;
+  height: 14px;
+  transition: opacity 300ms ease, transform 400ms var(--ease);
+}
+
+html[data-theme="dark"]  .theme-toggle .icon-moon { display: none }
+html[data-theme="light"] .theme-toggle .icon-sun  { display: none }
+
+/* ─────────────── Aurora hero ─────────────── */
+
+.hero {
+  position: relative;
+  min-height: 100dvh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  isolation: isolate;
+  padding: 7rem 2rem 6rem;
+}
+
+/* Aurora = three slow-drifting blurred blobs over a warm ink base.
+   Gold + purple + clay echo the two destinations' tonal palette. */
+.aurora {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  overflow: hidden;
+  background:
+    radial-gradient(ellipse at 20% 0%,   var(--hero-overlay-a), transparent 55%),
+    radial-gradient(ellipse at 80% 100%, var(--hero-overlay-b), transparent 60%),
+    var(--bg);
+  transition: background 450ms ease;
+}
+
+.aurora-blob {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(var(--aurora-blur));
+  will-change: transform;
+  opacity: var(--aurora-gold-opacity);
+  transition: background 450ms ease, opacity 450ms ease;
+}
+
+.aurora-blob--gold {
+  top: -24vmax;
+  left: -18vmax;
+  width: 56vmax;
+  height: 56vmax;
+  background: radial-gradient(circle, var(--aurora-gold) 0%, transparent 70%);
+  animation: drift-a 26s var(--ease) infinite alternate;
+}
+
+.aurora-blob--purple {
+  top: 10vmax;
+  right: -20vmax;
+  width: 62vmax;
+  height: 62vmax;
+  background: radial-gradient(circle, var(--aurora-purple) 0%, transparent 70%);
+  animation: drift-b 32s var(--ease) infinite alternate;
+  opacity: calc(var(--aurora-gold-opacity) + 0.1);
+}
+
+.aurora-blob--clay {
+  bottom: -22vmax;
+  left: 18vmax;
+  width: 54vmax;
+  height: 54vmax;
+  background: radial-gradient(circle, var(--aurora-clay) 0%, transparent 70%);
+  animation: drift-c 28s var(--ease) infinite alternate;
+}
+
+@keyframes drift-a { from { transform: translate(0, 0) scale(1) }    to { transform: translate(8vw, 6vh) scale(1.08) } }
+@keyframes drift-b { from { transform: translate(0, 0) scale(1) }    to { transform: translate(-10vw, -4vh) scale(0.95) } }
+@keyframes drift-c { from { transform: translate(0, 0) scale(1) }    to { transform: translate(6vw, -8vh) scale(1.1) } }
+
+/* ─────────────── Skyline line-art videos (hero atmosphere) ───────────────
+   Two 1:1 MP4s per location: _b (black bg) for dark theme, _w (white bg)
+   for light theme. We blend the backing color out: screen kills black,
+   multiply kills white — so only the hand-drawn line remains. The opposite
+   theme's pair is display:none and will autoplay on its first reveal. */
+
+.skyline-video {
+  position: absolute;
+  z-index: 1;
+  pointer-events: none;
+  aspect-ratio: 1 / 1;
+  opacity: 0;
+  animation: skylineIn 700ms ease 200ms forwards;
+}
+
+.skyline-video--cappadocia {
+  bottom: 42vh;
+  right: 24.5vw;
+  width: 17vw;
+}
+
+.skyline-video--sultanahmet {
+  bottom: 34vh;
+  left: 19vw;
+  width: 22vw;
+  transform: scaleX(-1);
+}
+
+/* Theme gating + blend. Blend modes remove the solid backing plate. */
+.skyline-video--dark  { display: none; mix-blend-mode: screen; }
+.skyline-video--light { display: none; mix-blend-mode: multiply; }
+html[data-theme="dark"]  .skyline-video--dark  { display: block; }
+html[data-theme="light"] .skyline-video--light { display: block; }
+
+html[data-theme="light"] .skyline-video { --skyline-opacity: 0.55; }
+html[data-theme="dark"]  .skyline-video { --skyline-opacity: 0.65; }
+
+@keyframes skylineIn {
+  from { opacity: 0 }
+  to   { opacity: var(--skyline-opacity, 0.5) }
+}
+
+/* Film grain (shared noise SVG) */
+.grain,
+.drawer-grain {
+  pointer-events: none;
+  background-image: url("data:image/svg+xml;utf8,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.6'/%3E%3C/svg%3E");
+  mix-blend-mode: overlay;
+}
+
+.grain {
+  position: absolute;
+  inset: -2%;
+  z-index: 1;
+  opacity: var(--grain-opacity);
+  transition: opacity 450ms ease;
+}
+
+/* Hero content */
+.hero-inner {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  max-width: 44rem;
+  opacity: 0;
+  animation: fadeUp 1800ms var(--ease) 500ms forwards;
+}
+
+.wordmark { margin: 0; line-height: 0 }
+
+/* Logo uses CSS mask so we can recolor via background-color per theme.
+   The .webp has an alpha channel (transparent bg + colored shape). */
+.wordmark-logo {
+  display: block;
+  width: min(13.09rem, 34.51vw);
+  aspect-ratio: 720 / 884;
+  background-color: var(--logo-color);
+  -webkit-mask-image: url("./public/logo.webp");
+          mask-image: url("./public/logo.webp");
+  -webkit-mask-repeat: no-repeat;
+          mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+          mask-position: center;
+  -webkit-mask-size: contain;
+          mask-size: contain;
+  filter: drop-shadow(0 2px 24px rgba(0, 0, 0, 0.35));
+  transition: background-color 450ms ease, filter 450ms ease;
+}
+
+html[data-theme="light"] .wordmark-logo {
+  filter: drop-shadow(0 2px 18px rgba(61, 26, 92, 0.18));
+}
+
+.rule {
+  display: block;
+  width: 84px;
+  height: 1px;
+  background: var(--gold);
+  margin: 1.8rem auto 1.5rem;
+  transform-origin: center;
+  opacity: 0;
+  animation: scaleX 1100ms ease 1800ms forwards;
+}
+
+.tagline {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: clamp(1.15rem, 1.6vw, 1.4rem);
+  line-height: 1.6;
+  color: var(--text-strong);
+  margin-bottom: 1.1rem;
+  text-shadow: var(--shadow-lede);
+}
+
+.tagline em {
+  font-style: italic;
+  color: var(--purple-2);
+}
+
+html[data-theme="dark"] .tagline em { color: var(--gold-light) }
+
+.lede {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-style: italic;
+  font-size: clamp(0.95rem, 1.1vw, 1.08rem);
+  line-height: 1.8;
+  color: var(--muted);
+  max-width: 34rem;
+  margin-bottom: 2.6rem;
+  text-shadow: var(--shadow-lede);
+}
+
+/* ─────────────── Primary CTA (hero) ─────────────── */
+
+.cta-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.85em;
+  padding: 1rem 2.25rem;
+  padding-left: calc(2.25rem + 0.34em);
+  font-family: var(--font-sans);
+  font-size: 0.7rem;
+  font-weight: 500;
+  letter-spacing: 0.34em;
+  text-transform: uppercase;
+  background: transparent;
+  color: var(--cta-text);
+  border: 1px solid var(--gold);
+  transition:
+    background-color 500ms var(--ease),
+    color 500ms ease,
+    border-color 500ms ease,
+    letter-spacing 500ms ease;
+}
+
+.cta-primary:hover {
+  background: var(--cta-hover-bg);
+  color: var(--cta-hover-text);
+  border-color: var(--cta-hover-bg);
+  letter-spacing: 0.38em;
+}
+
+.cta-primary .cta-arrow {
+  font-family: var(--font-display);
+  font-size: 0.95rem;
+  letter-spacing: 0;
+  transform: translateX(0);
+  transition: transform 600ms var(--ease);
+}
+
+.cta-primary:hover .cta-arrow { transform: translateX(6px) }
+
+/* ─────────────── Drawer ─────────────── */
+
+.drawer {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  visibility: hidden;
+  pointer-events: none;
+  /* Delay the hide until the slide-down + fade-out finish, so closing
+     animates as smoothly as opening. Opening flips to visible instantly. */
+  transition: visibility 0s linear 760ms;
+}
+
+.drawer[data-open="true"] {
+  visibility: visible;
+  pointer-events: auto;
+  transition: visibility 0s linear 0s;
+}
+
+.drawer-backdrop {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  backdrop-filter: blur(0);
+  -webkit-backdrop-filter: blur(0);
+  cursor: pointer;
+  transition:
+    background-color 600ms var(--ease-drawer),
+    backdrop-filter 600ms ease,
+    -webkit-backdrop-filter 600ms ease;
+}
+
+.drawer[data-open="true"] .drawer-backdrop {
+  background: var(--drawer-backdrop);
+  backdrop-filter: blur(var(--drawer-backdrop-blur));
+  -webkit-backdrop-filter: blur(var(--drawer-backdrop-blur));
+}
+
+.drawer-popup {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  max-height: 92dvh;
+  background:
+    radial-gradient(120% 60% at 50% -10%, var(--drawer-bg-glow) 0%, transparent 60%),
+    var(--bg-elevated);
+  border-top: 1px solid rgba(196, 162, 101, 0.38);
+  border-radius: 18px 18px 0 0;
+  padding: 1.25rem 2.25rem 2.5rem;
+  box-shadow: 0 -32px 80px rgba(0, 0, 0, 0.5);
+  overflow-y: auto;
+  transform: translateY(100%);
+  opacity: 0.85;
+  transition:
+    transform 720ms var(--ease-drawer),
+    opacity 500ms ease,
+    background 450ms ease;
+}
+
+html[data-theme="light"] .drawer-popup {
+  box-shadow: 0 -32px 70px rgba(40, 25, 15, 0.18);
+  border-top-color: rgba(196, 162, 101, 0.55);
+}
+
+.drawer[data-open="true"] .drawer-popup {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+/* Staggered inner reveal — smoother "pour" on open */
+.drawer-bar,
+.drawer-header,
+.drawer-panels {
+  opacity: 0;
+  transform: translateY(14px);
+  transition:
+    opacity 520ms ease,
+    transform 700ms var(--ease-drawer);
+}
+
+.drawer[data-open="true"] .drawer-bar     { opacity: 0.35; transform: translateY(0); transition-delay: 180ms }
+.drawer[data-open="true"] .drawer-header  { opacity: 1;    transform: translateY(0); transition-delay: 240ms }
+.drawer[data-open="true"] .drawer-panels  { opacity: 1;    transform: translateY(0); transition-delay: 340ms }
+
+.drawer-bar {
+  display: block;
+  width: 44px;
+  height: 4px;
+  background: var(--text-dim);
+  opacity: 0.35;
+  border-radius: 999px;
+  margin: 0 auto 1.25rem;
+}
+
+.drawer-header {
+  position: relative;
+  text-align: center;
+  padding: 0 3rem 1.75rem;
+}
+
+.drawer-title {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: clamp(1.35rem, 2.2vw, 1.7rem);
+  color: var(--text-strong);
+  margin-bottom: 0.6rem;
+}
+
+.drawer-desc {
+  font-family: var(--font-sans);
+  font-size: 0.62rem;
+  letter-spacing: 0.38em;
+  text-transform: uppercase;
+  padding-left: 0.38em;
+  color: var(--text-dim);
+}
+
+.drawer-close {
+  position: absolute;
+  top: -0.25rem;
+  right: 0;
+  width: 2.25rem;
+  height: 2.25rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  color: var(--text-dim);
+  transition: color 300ms ease, border-color 300ms ease, transform 400ms var(--ease);
+}
+
+.drawer-close:hover {
+  color: var(--gold);
+  border-color: var(--gold);
+  transform: rotate(90deg);
+}
+
+/* ─────────────── Drawer panels (two destinations) ─────────────── */
+
+.drawer-panels {
+  display: grid;
+  grid-template-columns: 1fr 1px 1fr;
+  max-width: 64rem;
+  margin: 0 auto;
+}
+
+.drawer-divider {
+  align-self: stretch;
+  width: 1px;
+  background: linear-gradient(
+    180deg,
+    transparent 0%,
+    rgba(196, 162, 101, 0.28) 22%,
+    rgba(196, 162, 101, 0.28) 78%,
+    transparent 100%
+  );
+}
+
+.drawer-card {
+  position: relative;
+  height: clamp(280px, 40vh, 360px);
+  overflow: hidden;
+  isolation: isolate;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--cream);
+  outline: none;
+  transition: filter 500ms var(--ease);
+}
+
+.drawer-card:focus-visible {
+  outline: 1px solid var(--gold);
+  outline-offset: -3px;
+}
+
+.drawer-media {
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  transform: scale(1.02);
+  transition:
+    transform 1600ms var(--ease),
+    filter 800ms ease;
+  will-change: transform, filter;
+  z-index: 0;
+}
+
+.drawer-media--sultanahmet {
+  background-image: url("./public/sultanahmet.webp");
+  background-color: #1E0A2E;
+}
+
+.drawer-media--cappadocia {
+  background-image: url("./public/cappadocia.webp");
+  background-color: #3b2416;
+}
+
+.drawer-veil { display: none }
+
+.drawer-grain {
+  position: absolute;
+  inset: -2%;
+  z-index: 2;
+  opacity: 0.07;
+}
+
+.drawer-card-inner {
+  position: relative;
+  z-index: 3;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 0 2rem;
+  max-width: 26rem;
+  transition:
+    opacity 500ms ease,
+    transform 700ms var(--ease);
+}
+
+.drawer-eyebrow {
+  font-family: var(--font-sans);
+  font-size: 0.56rem;
+  font-weight: 500;
+  letter-spacing: 0.42em;
+  text-transform: uppercase;
+  padding-left: 0.42em;
+  color: var(--cream-dim);
+  opacity: 0.85;
+  margin-bottom: 0.9rem;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.55);
+}
+
+.drawer-name {
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: clamp(1.9rem, 3.4vw, 2.6rem);
+  line-height: 1.12;
+  color: var(--cream);
+  margin-bottom: 1.1rem;
+  text-shadow: 0 2px 16px rgba(0, 0, 0, 0.55), 0 1px 4px rgba(0, 0, 0, 0.35);
+}
+
+.drawer-gold-rule {
+  display: block;
+  width: 44px;
+  height: 1px;
+  background: var(--gold);
+  margin: 0 auto 1.2rem;
+}
+
+.drawer-line {
+  font-family: var(--font-display);
+  font-style: italic;
+  font-weight: 400;
+  font-size: clamp(0.85rem, 1vw, 0.95rem);
+  line-height: 1.6;
+  color: var(--cream-dim);
+  margin-bottom: 1.4rem;
+  text-shadow: 0 1px 6px rgba(0, 0, 0, 0.5);
+}
+
+.drawer-cta {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 0.75em;
+  font-family: var(--font-sans);
+  font-size: 0.62rem;
+  font-weight: 500;
+  letter-spacing: 0.34em;
+  text-transform: uppercase;
+  color: var(--cream);
+  padding-left: 0.34em;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.55);
+  transition: color 400ms ease;
+}
+
+.drawer-cta-label {
+  border-bottom: 1px solid rgba(196, 162, 101, 0.45);
+  padding-bottom: 0.45em;
+  transition: border-color 400ms ease;
+}
+
+.drawer-cta-arrow {
+  font-family: var(--font-display);
+  font-size: 0.8rem;
+  letter-spacing: 0;
+  opacity: 0.75;
+  transition: transform 500ms var(--ease), opacity 400ms ease;
+}
+
+/* Hover theatre — yalnızca hover destekli (masaüstü) cihazlarda, mobilde sticky-hover sebebiyle devre dışı */
+@media (hover: hover) {
+  .drawer-media                                { filter: brightness(0.5) saturate(0.85) }
+  .drawer-card:hover .drawer-media             { transform: scale(1.06); filter: none }
+  .drawer-card:hover .drawer-cta               { color: var(--gold) }
+  .drawer-card:hover .drawer-cta-label         { border-bottom-color: var(--gold) }
+  .drawer-card:hover .drawer-cta-arrow         { opacity: 1; transform: translateX(4px) }
+}
+
+/* ─────────────── Responsive ─────────────── */
+
+@media (max-width: 900px) {
+  .topbar, .footer { padding: 1.25rem 1.5rem }
+  .hero            { padding: 6rem 1.25rem 5rem }
+  .wordmark-logo   { width: min(8.33rem, 30.94vw) }
+  .rule            { width: 60px; margin: 1.4rem auto 1.1rem }
+  .lede            { margin-bottom: 2rem }
+
+  html[data-theme="light"] .skyline-video { --skyline-opacity: 0.4 }
+  html[data-theme="dark"]  .skyline-video { --skyline-opacity: 0.5 }
+  .skyline-video--cappadocia  { width: 26vw; right: 12vw; bottom: 37vh }
+  .skyline-video--sultanahmet { width: 32vw; left: 8vw; bottom: 31vh }
+
+  .drawer-popup    { padding: 1.25rem 1.25rem 2rem; max-height: 88dvh }
+  .drawer-header   { padding: 0 2.25rem 1.25rem }
+  .drawer-panels   { grid-template-columns: 1fr; grid-template-rows: auto auto auto }
+  .drawer-divider  {
+    width: auto;
+    height: 1px;
+    background: linear-gradient(
+      90deg,
+      transparent 0%,
+      rgba(196, 162, 101, 0.28) 22%,
+      rgba(196, 162, 101, 0.28) 78%,
+      transparent 100%
+    );
+    margin: 0.5rem 0;
+  }
+  .drawer-card     { height: clamp(220px, 32dvh, 280px) }
+  .drawer-name     { font-size: clamp(1.7rem, 7vw, 2.25rem); margin-bottom: 0.8rem }
+  .drawer-gold-rule { margin-bottom: 0.9rem }
+  .drawer-line     { margin-bottom: 1rem }
+}
+
+@media (max-width: 520px) {
+  .topbar, .footer { padding: 1rem 1.1rem }
+  .meta            { display: none }
+  .topbar-right    { gap: 0.7rem }
+  .langs           { gap: 0.25rem }
+  .lang-btn        { font-size: 0.55rem; letter-spacing: 0.26em; padding: 0.3rem 0.15rem }
+  .theme-toggle    { width: 1.7rem; height: 1.7rem }
+  .wordmark-logo   { width: min(6.85rem, 28.56vw) }
+
+  /* Küçük ekranda wordmark'a nefes alsın diye skylines gizlenir */
+  .skyline-video   { display: none !important }
+
+  .cta-primary     { padding: 0.9rem 1.75rem; padding-left: calc(1.75rem + 0.34em); font-size: 0.64rem; letter-spacing: 0.3em }
+  .cta-primary:hover { letter-spacing: 0.33em }
+
+  .drawer-popup    { padding: 1rem 1rem 1.75rem; border-radius: 14px 14px 0 0 }
+  .drawer-header   { padding: 0 1.5rem 1rem }
+  .drawer-title    { font-size: 1.3rem }
+  .drawer-close    { width: 2rem; height: 2rem; top: -0.4rem }
+}
+
+/* ─────────────── Reduced motion ─────────────── */
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  .aurora-blob { display: none }
+  .hero-inner,
+  .rule,
+  .drawer-bar,
+  .drawer-header,
+  .drawer-panels { opacity: 1 !important; transform: none !important }
+  .skyline-video { opacity: var(--skyline-opacity, 0.5) !important }
+}

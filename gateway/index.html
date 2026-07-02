@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#F5F0E8" />
+  <title>Zeferan — Sultanahmet &amp; Cappadocia</title>
+  <meta name="robots" content="noindex, nofollow" />
+  <meta name="description" content="Savour the true taste of Azerbaijani cuisine with a panoramic view of Istanbul’s Historic Peninsula, and in a fairytale oasis amid the ancient rocks of Cappadocia." />
+
+  <!-- Always boot in light mode before first paint -->
+  <script>
+    (function () {
+      try { localStorage.removeItem('zeferan-theme'); } catch (_) {}
+      document.documentElement.setAttribute('data-theme', 'light');
+      var meta = document.querySelector('meta[name="theme-color"]');
+      if (meta) meta.setAttribute('content', '#F5F0E8');
+    })();
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Inter:wght@400;500&display=swap"
+  />
+  <link rel="stylesheet" href="./styles.css?v=25" />
+</head>
+<body>
+  <main class="gateway">
+    <!-- Top chrome -->
+    <header class="topbar">
+      <span class="topbar-spacer" aria-hidden="true"></span>
+      <div class="topbar-right">
+        <nav class="langs" aria-label="Language">
+          <button type="button" class="lang-btn lang-btn--active" data-lang="en" aria-pressed="true">EN</button>
+          <span class="lang-dot" aria-hidden="true">·</span>
+          <button type="button" class="lang-btn" data-lang="tr" aria-pressed="false">TR</button>
+          <span class="lang-dot" aria-hidden="true">·</span>
+          <button type="button" class="lang-btn" data-lang="az" aria-pressed="false">AZ</button>
+        </nav>
+        <button type="button" class="theme-toggle" id="theme-toggle" aria-label="Toggle light / dark theme" title="Toggle theme">
+          <svg class="icon-sun" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" aria-hidden="true">
+            <circle cx="10" cy="10" r="3.3" />
+            <path d="M10 2 v1.8 M10 16.2 v1.8 M2 10 h1.8 M16.2 10 h1.8 M4.3 4.3 l1.3 1.3 M14.4 14.4 l1.3 1.3 M4.3 15.7 l1.3 -1.3 M14.4 5.6 l1.3 -1.3" />
+          </svg>
+          <svg class="icon-moon" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <path d="M16.5 12.5 A7 7 0 1 1 7.5 3.5 a5.5 5.5 0 0 0 9 9 z" />
+          </svg>
+        </button>
+        <span class="meta">Est. MMXIX</span>
+      </div>
+    </header>
+
+    <!-- Aurora hero -->
+    <section class="hero" aria-label="Zeferan">
+      <div class="aurora" aria-hidden="true">
+        <span class="aurora-blob aurora-blob--gold"></span>
+        <span class="aurora-blob aurora-blob--purple"></span>
+        <span class="aurora-blob aurora-blob--clay"></span>
+      </div>
+
+      <!-- Line-art videos: drawing animation plays on load.
+           Two versions per skyline: _b (black bg → blend screen on dark),
+           _w (white bg → blend multiply on light). Only the active-theme
+           pair plays; the other is display:none until theme toggles. -->
+      <video class="skyline-video skyline-video--cappadocia skyline-video--dark" autoplay muted playsinline preload="auto" aria-hidden="true">
+        <source src="./public/cappadocia_b_web.mp4?v=3" type="video/mp4" />
+      </video>
+      <video class="skyline-video skyline-video--cappadocia skyline-video--light" autoplay muted playsinline preload="auto" aria-hidden="true">
+        <source src="./public/cappadocia_w_web.mp4?v=3" type="video/mp4" />
+      </video>
+      <video class="skyline-video skyline-video--sultanahmet skyline-video--dark" autoplay muted playsinline preload="auto" aria-hidden="true">
+        <source src="./public/sultanahmet_b_web.mp4" type="video/mp4" />
+      </video>
+      <video class="skyline-video skyline-video--sultanahmet skyline-video--light" autoplay muted playsinline preload="auto" aria-hidden="true">
+        <source src="./public/sultanahmet_w_web.mp4" type="video/mp4" />
+      </video>
+
+      <div class="grain" aria-hidden="true"></div>
+
+      <div class="hero-inner">
+        <h1 class="wordmark">
+          <span class="wordmark-logo" role="img" aria-label="Zeferan"></span>
+        </h1>
+        <span class="rule" aria-hidden="true"></span>
+        <p class="lede" data-i18n="lede">
+          Savour the true taste of Azerbaijani cuisine with a panoramic view of Istanbul&rsquo;s Historic Peninsula, and in a fairytale oasis amid the ancient rocks of Cappadocia.
+        </p>
+        <button type="button" class="cta-primary" id="open-destinations">
+          <span class="cta-label" data-i18n="picker">Choose a destination</span>
+          <span class="cta-arrow" aria-hidden="true">→</span>
+        </button>
+      </div>
+    </section>
+
+    <!-- Bottom chrome -->
+    <footer class="footer">
+      <span data-i18n="iso">Istanbul · Cappadocia</span>
+    </footer>
+  </main>
+
+  <!-- Drawer — div-based for predictable transition (native <dialog> animates poorly from display:none) -->
+  <div
+    class="drawer"
+    id="destinations"
+    role="dialog"
+    aria-modal="true"
+    aria-labelledby="drawer-title"
+    aria-hidden="true"
+  >
+    <button class="drawer-backdrop" data-close aria-label="Close drawer" tabindex="-1"></button>
+
+    <div class="drawer-popup" role="document">
+      <span class="drawer-bar" aria-hidden="true"></span>
+
+      <header class="drawer-header">
+        <h2 class="drawer-title" id="drawer-title" data-i18n="drawerTitle">Where shall we host you?</h2>
+        <button type="button" class="drawer-close" data-close aria-label="Close">
+          <svg viewBox="0 0 20 20" width="18" height="18" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" aria-hidden="true">
+            <path d="M5 5 L15 15 M15 5 L5 15" />
+          </svg>
+        </button>
+      </header>
+
+      <div class="drawer-panels">
+        <a class="drawer-card drawer-card--left" href="../">
+          <span class="drawer-media drawer-media--sultanahmet" aria-hidden="true"></span>
+          <span class="drawer-veil" aria-hidden="true"></span>
+          <span class="drawer-grain" aria-hidden="true"></span>
+
+          <div class="drawer-card-inner">
+            <h3 class="drawer-name" data-i18n="sultanahmet.name">Sultanahmet</h3>
+            <span class="drawer-gold-rule" aria-hidden="true"></span>
+            <p class="drawer-line" data-i18n="sultanahmet.line">Historic elegance in the heart of the city.</p>
+          </div>
+        </a>
+
+        <span class="drawer-divider" aria-hidden="true"></span>
+
+        <a class="drawer-card drawer-card--right" href="https://cappadocia.zeferan.com.tr/">
+          <span class="drawer-media drawer-media--cappadocia" aria-hidden="true"></span>
+          <span class="drawer-veil" aria-hidden="true"></span>
+          <span class="drawer-grain" aria-hidden="true"></span>
+
+          <div class="drawer-card-inner">
+            <h3 class="drawer-name" data-i18n="cappadocia.name">Cappadocia</h3>
+            <span class="drawer-gold-rule" aria-hidden="true"></span>
+            <p class="drawer-line" data-i18n="cappadocia.line">Gastronomic masterpieces and an unforgettable atmosphere.</p>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <script src="./script.js?v=6"></script>
+</body>
+</html>

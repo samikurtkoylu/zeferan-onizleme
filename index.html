@@ -1,0 +1,880 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Preconnect to tag/analytics origins -->
+  <link rel="preconnect" href="https://www.googletagmanager.com" crossorigin>
+  <link rel="preconnect" href="https://www.google-analytics.com" crossorigin>
+
+  <!-- Consent (sets default Consent Mode v2 to deny; banner UI loaded after) -->
+  <link rel="stylesheet" href="css/consent.css?v=20260511c">
+  <script src="js/consent.js?v=20260511a"></script>
+
+  <!-- Google Tag Manager (disabled until a real container ID is configured) -->
+  <!--
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-XXXXXXX');</script>
+  -->
+  <!-- End Google Tag Manager -->
+
+  <title
+    data-title-en="Zeferan Sultanahmet - Azerbaijan's Table Heritage Above Historic Istanbul"
+    data-title-tr="Zəfəran Sultanahmet - Tarixi İstanbul Üzərində Azərbaycan Süfrə Mirası"
+    data-title-ru="Zeferan Sultanahmet — Азербайджанское застольное наследие над историческим Стамбулом"
+    data-title-tk="Zeferan Sultanahmet - Tarihi İstanbul Ufkundaki Azerbaycan Sofra Mirası"
+  >Zeferan Sultanahmet - Azerbaijan's Table Heritage Above Historic Istanbul</title>
+  <meta
+    name="description"
+    content="Zeferan Sultanahmet serves Azerbaijani table rituals above historic Istanbul with antique plates, handcraft, signature ceremonies, and panoramic views."
+    data-content-en="Zeferan Sultanahmet serves Azerbaijani table rituals above historic Istanbul with antique plates, handcraft, signature ceremonies, and panoramic views."
+    data-content-tr="Zəfəran Sultanahmet, tarixi İstanbul üzərində antik boşqablar, əl işi, imza mərasimlər və panoramik mənzərə ilə Azərbaycan süfrə rituallarını təqdim edir."
+    data-content-ru="Zeferan Sultanahmet подает азербайджанские застольные ритуалы над историческим Стамбулом: антикварные тарелки, ручная работа, фирменные церемонии и панорамный вид."
+    data-content-tk="Zeferan Sultanahmet, tarihi İstanbul ufkunda antika tabaklar, el işçiliği, imza seremoniler ve panoramik manzarayla Azerbaycan sofra ritüelleri sunar."
+  >
+
+  <!-- Canonical & Hreflang -->
+  <link rel="canonical" href="https://www.sultanahmet.zeferan.com.tr/">
+  <link rel="alternate" hreflang="en" href="https://www.sultanahmet.zeferan.com.tr/en/">
+  <link rel="alternate" hreflang="az" href="https://www.sultanahmet.zeferan.com.tr/az/">
+  <link rel="alternate" hreflang="ru" href="https://www.sultanahmet.zeferan.com.tr/ru/">
+  <link rel="alternate" hreflang="tr" href="https://www.sultanahmet.zeferan.com.tr/tr/">
+  <link rel="alternate" hreflang="x-default" href="https://www.sultanahmet.zeferan.com.tr/">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="restaurant">
+  <meta property="og:site_name" content="Zeferan Sultanahmet">
+  <meta
+    property="og:title"
+    content="Zeferan Sultanahmet — Real Azerbaijani Cuisine"
+    data-content-en="Zeferan Sultanahmet — Real Azerbaijani Cuisine"
+    data-content-tr="Zəfəran Sultanahmet — Həqiqi Azərbaycan mətbəxi"
+    data-content-ru="Zeferan Sultanahmet — Настоящая азербайджанская кухня"
+    data-content-tk="Zeferan Sultanahmet — Gerçek Azerbaycan Mutfağı"
+  >
+  <meta
+    property="og:description"
+    content="Real taste of Azerbaijani cuisine atop AJWA Sultanahmet. Panoramic view, early 19th-century service ware, and an elegant interior."
+    data-content-en="Real taste of Azerbaijani cuisine atop AJWA Sultanahmet. Panoramic view, early 19th-century service ware, and an elegant interior."
+    data-content-tr="AJWA Sultanahmet-in zirvəsində Azərbaycan mətbəxinin həqiqi dadı. Panoramik mənzərə, XIX əsr servis qabları və zərif interyer."
+    data-content-ru="Настоящий вкус азербайджанской кухни на вершине AJWA Sultanahmet. Панорамный вид, сервировочная посуда начала XIX века и элегантный интерьер."
+    data-content-tk="AJWA Sultanahmet'in zirvesinde Azerbaycan mutfağının gerçek tadı. Panoramik manzara, 19. yüzyıl başına ait servis takımları ve zarif iç mekan."
+  >
+  <meta property="og:url" content="https://www.sultanahmet.zeferan.com.tr/">
+  <meta property="og:image" content="https://www.sultanahmet.zeferan.com.tr/your-repo/Gallery/639A84916.webp">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:locale" content="en_US">
+  <meta property="og:locale:alternate" content="az_AZ">
+  <meta property="og:locale:alternate" content="ru_RU">
+  <meta property="og:locale:alternate" content="tr_TR">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta
+    name="twitter:title"
+    content="Zeferan Sultanahmet — Real Azerbaijani Cuisine"
+    data-content-en="Zeferan Sultanahmet — Real Azerbaijani Cuisine"
+    data-content-tr="Zəfəran Sultanahmet — Həqiqi Azərbaycan mətbəxi"
+    data-content-ru="Zeferan Sultanahmet — Настоящая азербайджанская кухня"
+    data-content-tk="Zeferan Sultanahmet — Gerçek Azerbaycan Mutfağı"
+  >
+  <meta
+    name="twitter:description"
+    content="Real taste of Azerbaijani cuisine in AJWA Sultanahmet with a panoramic view."
+    data-content-en="Real taste of Azerbaijani cuisine in AJWA Sultanahmet with a panoramic view."
+    data-content-tr="AJWA Sultanahmet-də panoramik mənzərə ilə Azərbaycan mətbəxinin həqiqi dadı."
+    data-content-ru="Настоящий вкус азербайджанской кухни в AJWA Sultanahmet с панорамным видом."
+    data-content-tk="AJWA Sultanahmet'te panoramik manzara eşliğinde Azerbaycan mutfağının gerçek tadı."
+  >
+  <meta name="twitter:image" content="https://www.sultanahmet.zeferan.com.tr/your-repo/Gallery/639A84916.webp">
+
+  <!-- Additional SEO -->
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="theme-color" content="#0A0A0A">
+  <meta name="author" content="Zeferan Restaurant">
+
+  <link rel="preload" href="fonts/playfair/playfair-400-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/playfair/playfair-400i-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="fonts/inter/inter-500-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="css/fonts.css?v=20260416a">
+  <link rel="stylesheet" href="css/base.css?v=20260416a">
+  <link rel="stylesheet" href="css/nav.css?v=20260416a">
+  <link rel="stylesheet" href="css/hero.css?v=20260702a">
+  <link rel="stylesheet" href="css/story.css?v=20260421f">
+  <link rel="stylesheet" href="css/menu-highlights.css?v=20260421c">
+  <link rel="stylesheet" href="css/ambiance.css?v=20260416a">
+  <link rel="stylesheet" href="css/gallery.css?v=20260421c">
+  <link rel="stylesheet" href="css/testimonials.css?v=20260416a">
+  <link rel="stylesheet" href="css/reservation.css?v=20260421c">
+  <link rel="stylesheet" href="css/footer.css?v=20260511a">
+  <link rel="stylesheet" href="css/animations.css?v=20260416a">
+  <link rel="stylesheet" href="css/theme.css?v=20260511a">
+  <link rel="stylesheet" href="css/responsive.css?v=20260505i">
+  <link rel="stylesheet" href="css/modal.css?v=20260416a">
+  <link rel="icon" type="image/svg+xml" href="favicon.svg?v=20260415-2" sizes="any">
+  <link rel="icon" type="image/png" href="favicon-32x32.png?v=20260415-2" sizes="32x32">
+  <link rel="icon" type="image/png" href="favicon-16x16.png?v=20260415-2" sizes="16x16">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png?v=20260415-2">
+  <link rel="shortcut icon" href="favicon.ico?v=20260415-2">
+  <link rel="manifest" href="site.webmanifest?v=20260415-2">
+
+  <!-- JSON-LD Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Restaurant",
+    "name": "Zeferan Sultanahmet",
+    "alternateName": "Zeferan Restaurant",
+    "url": "https://www.sultanahmet.zeferan.com.tr",
+    "logo": "https://www.sultanahmet.zeferan.com.tr/your-repo/Logo.webp",
+    "image": [
+      "https://www.sultanahmet.zeferan.com.tr/your-repo/Gallery/639A84916.webp",
+      "https://www.sultanahmet.zeferan.com.tr/your-repo/Gallery/639A9076.webp",
+      "https://www.sultanahmet.zeferan.com.tr/your-repo/Gallery/DSCF1021.webp"
+    ],
+    "description": "Real taste of Azerbaijani cuisine atop AJWA Sultanahmet with a panoramic view, early 19th-century service ware, and an elegant interior.",
+    "servesCuisine": ["Azerbaijani", "Turkish"],
+    "priceRange": "€€€",
+    "telephone": "+90-212-638-22-12",
+    "email": "info.sultanahmet@zeferan.com.tr",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Emin Sinan, Piyer Loti Cd. No:30",
+      "addressLocality": "Fatih",
+      "addressRegion": "İstanbul",
+      "postalCode": "34126",
+      "addressCountry": "TR"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": 41.0054,
+      "longitude": 28.9768
+    },
+    "openingHoursSpecification": {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+      "opens": "07:30",
+      "closes": "23:00"
+    },
+    "acceptsReservations": "True",
+    "menu": "https://www.sultanahmet.zeferan.com.tr/menu.html",
+    "hasMap": "https://maps.google.com/?q=Zeferan+Sultanahmet",
+    "sameAs": [
+      "https://www.instagram.com/zeferansultanahmet/",
+      "https://www.facebook.com/ZeferanRestaurant/",
+      "https://www.tripadvisor.com.tr/Restaurant_Review-g293974-d12243231-Reviews-Zeferan_Restaurant-Istanbul.html",
+      "https://www.youtube.com/channel/UCaGe7tcFxzjMZQXZBmAKlMQ"
+    ],
+    "award": [
+      "GM Gourmand Table 2024",
+      "GM Gourmand Table 2025",
+      "TripAdvisor Travelers' Choice 2024"
+    ]
+  }
+  </script>
+</head>
+<body>
+<!-- Google Tag Manager (noscript) - disabled until container ID is configured -->
+<!--
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-XXXXXXX"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+-->
+<!-- End Google Tag Manager (noscript) -->
+
+  <a href="#main-content" class="skip-link" data-en="Skip to content" data-tr="Mündəricata keç" data-ru="Перейти к содержимому" data-tk="İçeriğe atla">Skip to content</a>
+
+  <!-- Navigation -->
+  <nav class="nav" id="nav">
+    <div class="nav-inner">
+      <a href="#" class="nav-logo"><img src="your-repo/Logo.webp" alt="Zeferan" class="nav-logo-img" width="1077" height="327" decoding="async"></a>
+      <div class="nav-links">
+        <a href="#story" data-en="Chef" data-tr="Şef" data-ru="Шеф-повар" data-tk="Şef">Chef</a>
+        <a href="menu.html" data-en="Menu" data-tr="Menyu" data-ru="Меню" data-tk="Menü">Menu</a>
+        <a href="#gallery" data-en="Gallery" data-tr="Qalereya" data-ru="Галерея" data-tk="Galeri">Gallery</a>
+        <a href="#reservation" class="nav-cta" data-en="Reservation" data-tr="Rezervasiya" data-ru="Бронирование" data-tk="Rezervasyon">Reservation</a>
+        <a href="tel:+902126382212" class="nav-phone" aria-label="Call Zeferan" data-aria-label-en="Call Zeferan" data-aria-label-tr="Zəfərana zəng et" data-aria-label-ru="Позвонить в Zeferan" data-aria-label-tk="Zeferan'ı ara">+90 212 638 22 12</a>
+        <div class="nav-limelight" id="nav-limelight"></div>
+      </div>
+      <div class="lang-dropdown" id="lang-dropdown">
+        <button class="lang-current" id="lang-toggle" aria-label="Switch language" data-aria-label-en="Switch language" data-aria-label-tr="Dili dəyiş" data-aria-label-ru="Сменить язык" data-aria-label-tk="Dili değiştir">
+          <span class="lang-current-text">EN</span>
+          <svg class="lang-arrow" width="10" height="6" viewBox="0 0 10 6"><path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </button>
+        <div class="lang-menu" id="lang-menu">
+          <button class="lang-option active" data-lang="en">EN</button>
+          <button class="lang-option" data-lang="tr">AZ</button>
+          <button class="lang-option" data-lang="tk">TR</button>
+        </div>
+      </div>
+      <button class="theme-toggle" id="theme-toggle" aria-label="Toggle theme" data-aria-label-en="Toggle theme" data-aria-label-tr="Temanı dəyiş" data-aria-label-ru="Сменить тему" data-aria-label-tk="Temayı değiştir">
+        <span class="theme-toggle-track">
+          <span class="theme-toggle-icon theme-icon-dark">&#9790;</span>
+          <span class="theme-toggle-icon theme-icon-light">&#9788;</span>
+          <span class="theme-toggle-thumb"></span>
+        </span>
+      </button>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Menu" aria-expanded="false" aria-controls="mobile-menu" data-aria-label-en="Open menu" data-aria-label-tr="Menyunu aç" data-aria-label-ru="Открыть меню" data-aria-label-tk="Menüyü aç">
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div class="mobile-menu" id="mobile-menu">
+    <a href="#story" data-en="Chef" data-tr="Şef" data-ru="Шеф-повар" data-tk="Şef">Chef</a>
+    <a href="menu.html" data-en="Menu" data-tr="Menyu" data-ru="Меню" data-tk="Menü">Menu</a>
+    <a href="#gallery" data-en="Gallery" data-tr="Qalereya" data-ru="Галерея" data-tk="Galeri">Gallery</a>
+    <a href="#reservation" data-en="Reservation" data-tr="Rezervasiya" data-ru="Бронирование" data-tk="Rezervasyon">Reservation</a>
+    <a href="tel:+902126382212" class="mobile-menu-phone">+90 212 638 22 12</a>
+  </div>
+
+  <main id="main-content">
+
+  <!-- Scroll Animation -->
+  <section class="scroll-animation" id="scroll-animation">
+    <div class="scroll-canvas-wrapper">
+      <canvas id="scroll-canvas"></canvas>
+      <video id="scroll-video" class="scroll-video" muted playsinline preload="none" poster="your-repo/scroll-poster.webp" disableremoteplayback aria-hidden="true" width="1920" height="1080">
+        <source data-src="your-repo/scroll-animation.h265.mp4" type="video/mp4; codecs=hvc1">
+        <source data-src="your-repo/scroll-animation.h264.mp4" type="video/mp4">
+      </video>
+      <div class="scroll-overlay-content">
+        <div class="hero-overlay-gradient"></div>
+        <div class="scroll-hero" id="scroll-hero">
+          <h1 class="hero-title">
+            <span class="hero-title-line" data-en="Haute cuisine," data-tr="Azərbaycansayağı" data-ru="Высокая гастрономия" data-tk="Azerbaycan usulü">Haute cuisine,</span>
+            <span class="hero-title-line" data-en="&lt;em&gt;the Azerbaijani way&lt;/em&gt;" data-tr="&lt;em&gt;yüksək qastronomiya&lt;/em&gt;" data-ru="&lt;em&gt;по-азербайджански&lt;/em&gt;" data-tk="&lt;em&gt;yüksek gastronomi&lt;/em&gt;"><em>the Azerbaijani way</em></span>
+          </h1>
+          <div class="hero-divider"></div>
+          <p class="hero-subtitle" data-en="At Zeferan, you can savour the chef's signature dishes in a warm atmosphere with a stunning view of the Historic Peninsula. Unobtrusive service and a refined interior make it the perfect setting for a business dinner or a romantic evening." data-tr="Zəfəranda müəllif yeməklərindən Tarixi Yarımadaya açılan heyrətamiz mənzərə ilə rahat mühitdə həzz ala bilərsiniz. Nəzakətli xidmət və zərif interyer onu işgüzar şam yeməyi və romantik görüş üçün ideal məkana çevirir." data-ru="В ресторане Zəfəran вы можете насладиться авторскими блюдами в уютной атмосфере с потрясающим видом на исторический полуостров. Ненавязчивый сервис и изысканный интерьер делают его лучшим местом для делового ужина или романтического свидания." data-tk="Zeferan'da şefin imza tabaklarının keyfini, Tarihi Yarımada'nın büyüleyici manzarası eşliğinde sıcak bir atmosferde çıkarabilirsiniz. Göze batmayan servis ve zarif iç mekân, burayı iş yemekleri ve romantik akşamlar için en doğru adres yapar.">At Zeferan, you can savour the chef's signature dishes in a warm atmosphere with a stunning view of the Historic Peninsula. Unobtrusive service and a refined interior make it the perfect setting for a business dinner or a romantic evening.</p>
+          <a href="#reservation" class="hero-btn" data-en="Reserve a Table" data-tr="Masa Rezerv Edin" data-ru="Бронирование" data-tk="Masa Ayırtın">Reserve a Table</a>
+        </div>
+        <div class="hero-scroll-hint" id="scroll-hint">
+          <span data-en="Scroll" data-tr="Sürüşdürün" data-ru="Листайте" data-tk="Kaydırın">Scroll</span>
+          <div class="hero-scroll-line"></div>
+        </div>
+        <!-- Blueprint annotations removed -->
+        <!-- Mid-scroll text overlays -->
+        <div class="scroll-text scroll-text-1 scroll-text--body">
+          <h2 data-en="Spectacular sunsets over the Sea of Marmara and breathtaking views of the Historic Peninsula and the coastline from Kadikoy to Yesilkoy." data-tr="Mərmərə dənizi üzərində möhtəşəm günəş batımları və Tarixi Yarımada ilə Kadıköydən Yeşilköyə qədər uzanan sahil mənzərəsi." data-ru="Великолепные закаты над Мраморным морем и захватывающие виды на исторический полуостров и набережную от Кадыкёя до Ешилькёя." data-tk="Marmara Denizi üzerinde muhteşem gün batımları ve Tarihi Yarımada ile Kadıköy'den Yeşilköy'e uzanan sahili kucaklayan büyüleyici manzaralar.">Spectacular sunsets over the Sea of Marmara and breathtaking views of the Historic Peninsula and the coastline from Kadikoy to Yesilkoy.</h2>
+        </div>
+        <div class="scroll-text scroll-text-2 scroll-text--body">
+          <h2 data-en="Handwoven Azerbaijani carpets, walnut furniture with mother-of-pearl inlay, and ornamental hand-painted ceiling motifs." data-tr="Əl ilə toxunmuş Azərbaycan xalçaları, sədəf işləməli qoz ağacı mebeli və tavanda əl ilə çəkilmiş naxış motivləri." data-ru="Азербайджанские ковры ручной работы, ореховая мебель с перламутровыми инкрустациями, орнаментальная ручная роспись на потолке." data-tk="El dokuması Azerbaycan halıları, sedef kakmalı ceviz mobilyalar ve tavanda el ile çizilmiş süs motifleri.">Handwoven Azerbaijani carpets, walnut furniture with mother-of-pearl inlay, and ornamental hand-painted ceiling motifs.</h2>
+        </div>
+      </div>
+    </div>
+    <div class="scroll-progress-bar">
+      <div class="scroll-progress-fill" id="scroll-progress-fill"></div>
+    </div>
+  </section>
+
+  <!-- Content Sections -->
+  <div class="horizontal-scroll" id="horizontal-scroll">
+    <div class="h-scroll-sticky">
+      <div class="horizontal-scroll-inner" id="horizontal-scroll-inner">
+
+  <!-- Story Section -->
+  <section class="story" id="story">
+    <div class="story-inner">
+      <div class="story-left">
+        <p class="section-label" data-en="Chef" data-tr="Şef" data-ru="Шеф-повар" data-tk="Şef">Chef</p>
+        <h2 class="story-heading" data-en="Ramin Nuriyev,&lt;br&gt;&lt;em&gt;the storyteller chef&lt;/em&gt;" data-tr="Ramin Nuriyev,&lt;br&gt;&lt;em&gt;hekayə danışan şef&lt;/em&gt;" data-ru="Рамин Нуриев,&lt;br&gt;&lt;em&gt;шеф-сказитель&lt;/em&gt;" data-tk="Ramin Nuriyev,&lt;br&gt;&lt;em&gt;hikaye anlatan şef&lt;/em&gt;">Ramin Nuriyev,<br><em>the storyteller chef</em></h2>
+        <figure class="story-portrait">
+          <div class="story-portrait-frame">
+            <img src="your-repo/chef-ramin-w900.webp" alt="Zeferan Executive Chef portrait" width="900" height="1269" loading="lazy" decoding="async">
+          </div>
+        </figure>
+      </div>
+      <div class="story-right">
+        <p class="story-text" data-en="Ramin Nuriyev is one of the leading innovators of modern Azerbaijani fine cuisine. Weaving a rich culinary heritage together with an author's vision, he creates a gastronomy that impresses, inspires, and lingers in memory. As the host and creator of the popular «Mənim mətbəxim» series, he reveals the depth of his national cuisine and turns cooking into a true art form. His philosophy rests on flawless ingredient quality, respect for tradition, and a constant desire to surprise." data-tr="Ramin Nuriyev müasir Azərbaycan yüksək mətbəxinin başlıca yenilikçilərindəndir. Zəngin kulinariya mirasını müəllif baxışı ilə birləşdirən şef təsirləyici, ilhamlandırıcı və yaddaqalan qastronomiya yaradır. Populyar «Mənim mətbəxim» layihəsinin müəllifi və aparıcısı kimi milli mətbəxin dərinliyini açır, hazırlanma prosesini həqiqi sənətə çevirir. Onun fəlsəfəsi qüsursuz məhsul keyfiyyətinə, ənənələrə hörmətə və hər dəfə təəccübləndirmək arzusuna söykənir." data-ru="Рамин Нуриев — один из главных новаторов современной азербайджанской высокой кухни. Виртуозно соединяя богатое кулинарное наследие с авторским взглядом, он создаёт гастрономию, которая впечатляет, вдохновляет и запоминается. Как автор и ведущий популярного проекта «Mənim mətbəxim», Рамин Нуриев раскрывает глубину национальной кухни, превращая процесс приготовления в настоящее искусство. Его философия строится на безупречном качестве продуктов, уважении к традициям и стремлении удивлять." data-tk="Ramin Nuriyev, modern Azerbaycan yüksek mutfağının önde gelen yenilikçilerinden biri. Zengin mutfak mirasını yazar bakış açısıyla ustaca birleştiren şef; etkileyici, ilham verici ve hatırda kalan bir gastronomi yaratıyor. Popüler «Mənim mətbəxim» programının yapımcısı ve sunucusu olarak ulusal mutfağın derinliğini açığa çıkarıyor ve pişirme sürecini gerçek bir sanata dönüştürüyor. Felsefesi; kusursuz ürün kalitesine, geleneklere saygıya ve sürekli şaşırtma arzusuna dayanıyor.">
+          Ramin Nuriyev is one of the leading innovators of modern Azerbaijani fine cuisine. Weaving a rich culinary heritage together with an author's vision, he creates a gastronomy that impresses, inspires, and lingers in memory. As the host and creator of the popular «Mənim mətbəxim» series, he reveals the depth of his national cuisine and turns cooking into a true art form. His philosophy rests on flawless ingredient quality, respect for tradition, and a constant desire to surprise.
+        </p>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Menu Highlights -->
+  <section class="menu" id="menu">
+    <div class="menu-header">
+      <p class="section-label" data-en="Curated Menu" data-tr="Seçilmiş Menyu" data-ru="Кураторское меню" data-tk="Kürasyon Menü">Curated Menu</p>
+      <h2 class="menu-heading" data-en="Choose a path through&lt;br&gt;the &lt;em&gt;table&lt;/em&gt;" data-tr="Süfrədə öz&lt;br&gt;&lt;em&gt;yolunuzu&lt;/em&gt; seçin" data-ru="Выберите путь&lt;br&gt;через &lt;em&gt;стол&lt;/em&gt;" data-tk="Sofrada kendi&lt;br&gt;&lt;em&gt;rotanızı&lt;/em&gt; seçin">Choose a path through<br>the <em>table</em></h2>
+      <p class="menu-desc" data-en="The full menu is rich, but the first visit should feel guided. Begin with a ritual, a classic, or a sunset table." data-tr="Tam menyu zəngindir, amma ilk ziyarət bələdçili hiss olunmalıdır. Bir ritual, klassik dad və ya gün batımı masası ilə başlayın." data-ru="Полное меню богато, но первый визит должен быть направленным. Начните с ритуала, классики или стола на закате." data-tk="Tam menü zengin; ama ilk ziyaret rehberli hissettirmeli. Bir ritüel, bir klasik ya da gün batımı masasıyla başlayın.">The full menu is rich, but the first visit should feel guided. Begin with a ritual, a classic, or a sunset table.</p>
+    </div>
+
+    <div class="menu-journeys">
+      <a href="menu.html" class="menu-journey">
+        <span>01</span>
+        <h3 data-en="First Visit" data-tr="İlk Ziyarət" data-ru="Первый визит" data-tk="İlk Ziyaret">First Visit</h3>
+        <p data-en="Shah Pilaf, Piti, Baku Baklava, and Azerbaijani tea: the clearest first chapter." data-tr="Şah Plov, Piti, Bakı paxlavası və Azərbaycan çayı: ən aydın ilk fəsil." data-ru="Шах-плов, пити, бакинская пахлава и азербайджанский чай: самая ясная первая глава." data-tk="Şah Pilav, Piti, Bakü baklavası ve Azerbaycan çayı: en net ilk bölüm.">Shah Pilaf, Piti, Baku Baklava, and Azerbaijani tea: the clearest first chapter.</p>
+      </a>
+      <a href="menu.html" class="menu-journey">
+        <span>02</span>
+        <h3 data-en="Tableside Rituals" data-tr="Masa Başı Rituallar" data-ru="Ритуалы у стола" data-tk="Masa Başı Ritüeller">Tableside Rituals</h3>
+        <p data-en="Choose dishes that arrive with movement, sound, aroma, and a host beside the table." data-tr="Hərəkət, səs, qoxu və masanın yanında ev sahibi ilə gələn yeməkləri seçin." data-ru="Выбирайте блюда с движением, звуком, ароматом и хозяином у стола." data-tk="Hareket, ses, koku ve masanın yanında ev sahibiyle gelen yemekleri seçin.">Choose dishes that arrive with movement, sound, aroma, and a host beside the table.</p>
+      </a>
+      <a href="#reservation" class="menu-journey">
+        <span>03</span>
+        <h3 data-en="Golden Hour Table" data-tr="Gün Batımı Masası" data-ru="Стол золотого часа" data-tk="Gün Batımı Masası">Golden Hour Table</h3>
+        <p data-en="Let the Historic Peninsula become part of the menu: reserve for the view, stay for the ceremony." data-tr="Tarixi Yarımada menyunun bir hissəsi olsun: mənzərə üçün rezerv edin, mərasim üçün qalın." data-ru="Пусть Исторический полуостров станет частью меню: бронируйте ради вида, оставайтесь ради церемонии." data-tk="Tarihi Yarımada menünün parçası olsun: manzara için ayırtın, seremoni için kalın.">Let the Historic Peninsula become part of the menu: reserve for the view, stay for the ceremony.</p>
+      </a>
+    </div>
+
+    <div class="menu-morph-container" id="menu-morph" data-layout="grid">
+      <div class="menu-item" data-card="0">
+        <div class="menu-item-img">
+          <img src="your-repo/menu/sah-pilav.webp" alt="Şah Pilav" width="1280" height="853" loading="lazy" decoding="async" data-alt-en="Shah Pilaf" data-alt-tr="Şah Plov" data-alt-ru="Шах-плов" data-alt-tk="Şah Pilav">
+        </div>
+        <div class="menu-item-content">
+          <div class="menu-item-number">01</div>
+          <h3 class="menu-item-name" data-en="Shah Pilaf" data-tr="Şah Plov" data-ru="Шах-плов" data-tk="Şah Pilav">Şah Pilav</h3>
+          <p class="menu-item-desc" data-en="Handmade pastry dome with lamb, dried apricot, prune, raisin, chestnut, saffron rice and butter." data-tr="Əl işi xəmir qübbəsində quzu əti, quru ərik, gavalı, kişmiş, şabalıd, zəfəranlı düyü və kərə yağı." data-ru="Купол из теста ручной работы с бараниной, курагой, черносливом, изюмом, каштаном, шафрановым рисом и маслом." data-tk="El yapımı hamur kubbesinde kuzu eti, kuru kayısı, erik, kuru üzüm, kestane, safranlı pilav ve tereyağı.">Handmade pastry dome with lamb, dried apricot, prune, raisin, chestnut, saffron rice and butter.</p>
+          <span class="menu-item-price">€75</span>
+        </div>
+      </div>
+      <div class="menu-item" data-card="1">
+        <div class="menu-item-img">
+          <img src="uploads/menu/13_844d55b8bb8e-w480.webp" srcset="uploads/menu/13_844d55b8bb8e-w480.webp 480w, uploads/menu/13_844d55b8bb8e-w960.webp 960w" sizes="(max-width: 768px) 100vw, 600px" alt="Piti" width="600" height="600" loading="lazy" decoding="async" data-alt-en="Piti" data-alt-tr="Piti" data-alt-ru="Пити" data-alt-tk="Piti">
+        </div>
+        <div class="menu-item-content">
+          <div class="menu-item-number">02</div>
+          <h3 class="menu-item-name" data-en="Piti" data-tr="Piti" data-ru="Пити" data-tk="Piti">Piti</h3>
+          <p class="menu-item-desc" data-en="Lamb with lamb tail fat, chestnut, chickpea, dried apricot and saffron — a timeless Azerbaijani classic." data-tr="Quzu əti, quzu quyruq yağı, şabalıd, noxud, quru ərik və zəfəran — zamansız Azərbaycan klassikası." data-ru="Баранина с курдючным жиром, каштаном, нутом, курагой и шафраном — вечная азербайджанская классика." data-tk="Kuzu eti, kuzu kuyruk yağı, kestane, nohut, kuru kayısı ve safran — zamansız Azerbaycan klasiği.">Lamb with lamb tail fat, chestnut, chickpea, dried apricot and saffron — a timeless Azerbaijani classic.</p>
+          <span class="menu-item-price">€39</span>
+        </div>
+      </div>
+      <div class="menu-item" data-card="2">
+        <div class="menu-item-img">
+          <img src="uploads/menu/28_4aa884515c7b-w480.webp" srcset="uploads/menu/28_4aa884515c7b-w480.webp 480w, uploads/menu/28_4aa884515c7b-w960.webp 960w" sizes="(max-width: 768px) 100vw, 600px" alt="Kuzu Pirzola" width="600" height="600" loading="lazy" decoding="async" data-alt-en="Lamb Chops" data-alt-tr="Quzu Qabırğa" data-alt-ru="Бараньи рёбрышки" data-alt-tk="Kuzu Pirzola">
+        </div>
+        <div class="menu-item-content">
+          <div class="menu-item-number">03</div>
+          <h3 class="menu-item-name" data-en="Lamb Chops" data-tr="Quzu Qabırğa" data-ru="Бараньи рёбрышки" data-tk="Kuzu Pirzola">Kuzu Pirzola</h3>
+          <p class="menu-item-desc" data-en="Lamb chops marinated in mountain oregano and onion, grilled over charcoal. Served with grilled vegetables and local sauces." data-tr="Dağ kəklikotu və soğan ilə marinə edilmiş quzu pirzola, kömür üzərində bişirilir. Qril tərəvəzləri və yerli souslarla." data-ru="Бараньи рёбрышки, маринованные в горном орегано и луке, приготовленные на углях. Подаются с овощами гриль и местными соусами." data-tk="Dağ kekiği ve soğanda marine edilmiş kuzu pirzola, kömür üzerinde pişirilir. Izgara sebzeleri ve yöresel soslarla servis edilir.">Lamb chops marinated in mountain oregano and onion, grilled over charcoal. Served with grilled vegetables and local sauces.</p>
+          <span class="menu-item-price">€47</span>
+        </div>
+      </div>
+      <div class="menu-item" data-card="3">
+        <div class="menu-item-img">
+          <img src="uploads/menu/32_97ee325c7239-w480.webp" srcset="uploads/menu/32_97ee325c7239-w480.webp 480w, uploads/menu/32_97ee325c7239-w960.webp 960w" sizes="(max-width: 768px) 100vw, 600px" alt="Bakü Baklavası" width="600" height="600" loading="lazy" decoding="async" data-alt-en="Baku Baklava" data-alt-tr="Bakı Paxlavası" data-alt-ru="Бакинская пахлава" data-alt-tk="Bakü Baklavası">
+        </div>
+        <div class="menu-item-content">
+          <div class="menu-item-number">04</div>
+          <h3 class="menu-item-name" data-en="Baku Baklava" data-tr="Bakı Paklavası" data-ru="Бакинская пахлава" data-tk="Bakü Baklavası">Bakü Baklavası</h3>
+          <p class="menu-item-desc" data-en="Traditional Azerbaijani baklava layered with walnuts — a sweet finale to your meal." data-tr="Cevizlə təbəqələnmiş ənənəvi Azərbaycan baklavası — yeməyinizin şirin finalı." data-ru="Традиционная азербайджанская пахлава с грецкими орехами — сладкий финал вашей трапезы." data-tk="Cevizle katlanmış geleneksel Azerbaycan baklavası — yemeğinizin tatlı finali.">Traditional Azerbaijani baklava layered with walnuts — a sweet finale to your meal.</p>
+          <span class="menu-item-price">€15</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="menu-cta">
+      <a href="menu.html" class="menu-link" id="view-menu-btn" data-en="View Full Menu &lt;span&gt;&amp;rarr;&lt;/span&gt;" data-tr="Tam Menyuya Bax &lt;span&gt;&amp;rarr;&lt;/span&gt;" data-ru="Полное меню &lt;span&gt;&amp;rarr;&lt;/span&gt;" data-tk="Tüm Menüyü Gör &lt;span&gt;&amp;rarr;&lt;/span&gt;">View Full Menu <span>&rarr;</span></a>
+    </div>
+  </section>
+
+  <!-- Gallery Section -->
+  <section class="gallery" id="gallery">
+    <div class="gallery-header">
+      <p class="section-label" data-en="The Table in Motion" data-tr="Hərəkətdə Süfrə" data-ru="Стол в движении" data-tk="Hareket Halinde Sofra">The Table in Motion</p>
+      <h2 class="gallery-heading" data-en="Ritual, craft and&lt;br&gt;&lt;em&gt;hospitality&lt;/em&gt;" data-tr="Ritual, sənətkarlıq və&lt;br&gt;&lt;em&gt;qonaqpərvərlik&lt;/em&gt;" data-ru="Ритуал, ремесло и&lt;br&gt;&lt;em&gt;гостеприимство&lt;/em&gt;" data-tk="Ritüel, zanaat ve&lt;br&gt;&lt;em&gt;misafirperverlik&lt;/em&gt;">Ritual, craft and<br><em>hospitality</em></h2>
+      <p class="gallery-desc" data-en="Not a museum of objects, but a living table: hands, plates, steam, view, and the quiet rhythm of service." data-tr="Əşyaların muzeyi deyil, yaşayan süfrə: əllər, boşqablar, buxar, mənzərə və servisin sakit ritmi." data-ru="Не музей предметов, а живой стол: руки, тарелки, пар, вид и тихий ритм сервиса." data-tk="Eşyaların müzesi değil, yaşayan bir sofra: eller, tabaklar, buhar, manzara ve servisin sessiz ritmi.">Not a museum of objects, but a living table: hands, plates, steam, view, and the quiet rhythm of service.</p>
+    </div>
+    <div class="gallery-scroll-container">
+      <div class="gallery-scroll-track" id="gallery-track">
+        <div class="gallery-item"><img src="your-repo/Gallery/639A84916.webp" alt="Restaurant interior" width="600" height="600" loading="lazy" decoding="async" data-alt-en="Restaurant interior" data-alt-tr="Restoran interyeri" data-alt-ru="Интерьер ресторана" data-alt-tk="Restoran iç mekanı"><span class="gallery-caption" data-en="Heritage Room" data-tr="Miras Zalı" data-ru="Зал наследия" data-tk="Miras Salonu">Heritage Room</span></div>
+        <div class="gallery-item"><img src="your-repo/Gallery/639A9076.webp" alt="Dining ambiance" width="600" height="600" loading="lazy" decoding="async" data-alt-en="Dining ambiance" data-alt-tr="Yemək salonunun ab-havası" data-alt-ru="Атмосфера зала" data-alt-tk="Yemek salonu atmosferi"><span class="gallery-caption" data-en="Quiet Service" data-tr="Sakit Servis" data-ru="Тихий сервис" data-tk="Sessiz Servis">Quiet Service</span></div>
+        <div class="gallery-item"><img src="your-repo/Gallery/DSCF1021.webp" alt="Restaurant atmosphere" width="600" height="600" loading="lazy" decoding="async" data-alt-en="Restaurant atmosphere" data-alt-tr="Restoran atmosferi" data-alt-ru="Атмосфера ресторана" data-alt-tk="Restoran atmosferi"><span class="gallery-caption" data-en="Historic View" data-tr="Tarixi Mənzərə" data-ru="Исторический вид" data-tk="Tarihi Manzara">Historic View</span></div>
+        <div class="gallery-item"><img src="your-repo/Gallery/DSCF1437.webp" alt="Guest dining" width="600" height="600" loading="lazy" decoding="async" data-alt-en="Guest dining" data-alt-tr="Qonaqlar yemək süfrəsində" data-alt-ru="Гости за столом" data-alt-tk="Misafirler yemek keyfinde"><span class="gallery-caption" data-en="Hosted Table" data-tr="Qonaqlı Süfrə" data-ru="Принимающий стол" data-tk="Ağırlanan Sofra">Hosted Table</span></div>
+        <div class="gallery-item"><img src="your-repo/Gallery/DSCF1545.webp" alt="Fine dining" width="600" height="600" loading="lazy" decoding="async" data-alt-en="Fine dining" data-alt-tr="Zərif servis" data-alt-ru="Изысканная сервировка" data-alt-tk="Şık servis"><span class="gallery-caption" data-en="Antique Service" data-tr="Antik Servis" data-ru="Антикварная подача" data-tk="Antika Servis">Antique Service</span></div>
+        <div class="gallery-item"><img src="your-repo/Gallery/DSCF1560.webp" alt="Kitchen view" width="600" height="600" loading="lazy" decoding="async" data-alt-en="Kitchen view" data-alt-tr="Mətbəxdən görünüş" data-alt-ru="Вид кухни" data-alt-tk="Mutfaktan görünüm"><span class="gallery-caption" data-en="Hands at Work" data-tr="İş Başında Əllər" data-ru="Руки в работе" data-tk="İş Başında Eller">Hands at Work</span></div>
+        <div class="gallery-item"><img src="your-repo/Gallery/DSCF1704.webp" alt="Bar area" width="600" height="600" loading="lazy" decoding="async" data-alt-en="Bar area" data-alt-tr="Bar bölməsi" data-alt-ru="Зона бара" data-alt-tk="Bar alanı"><span class="gallery-caption" data-en="Tea & Finish" data-tr="Çay və Final" data-ru="Чай и финал" data-tk="Çay ve Final">Tea &amp; Finish</span></div>
+        <div class="gallery-item"><img src="your-repo/Gallery/DSCF1758.webp" alt="Restaurant entrance" width="600" height="600" loading="lazy" decoding="async" data-alt-en="Restaurant entrance" data-alt-tr="Restoran girişi" data-alt-ru="Вход в ресторан" data-alt-tk="Restoran girişi"><span class="gallery-caption" data-en="Arrival" data-tr="Qarşılama" data-ru="Встреча" data-tk="Karşılama">Arrival</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Ambiance Section -->
+  <section class="ambiance" id="ambiance">
+    <div class="ambiance-inner">
+      <div class="ambiance-text">
+        <p class="section-label" data-en="The Setting" data-tr="Atmosfer" data-ru="Атмосфера" data-tk="Ambiyans">The Setting</p>
+        <h2 class="ambiance-heading" data-en="Charm of the&lt;br&gt;&lt;em&gt;eternal city&lt;/em&gt;" data-tr="Əbədi şəhərin&lt;br&gt;&lt;em&gt;cazibəsi&lt;/em&gt;" data-ru="Очарование&lt;br&gt;&lt;em&gt;вечного города&lt;/em&gt;" data-tk="Ebedi şehrin&lt;br&gt;&lt;em&gt;cazibesi&lt;/em&gt;">Charm of the<br><em>eternal city</em></h2>
+        <p class="ambiance-desc" data-en="Set within AJWA Sultanahmet, a hotel inspired by Seljuk and Ottoman architectural traditions, Zeferan reflects a spirit of craftsmanship and impeccable taste. Every detail here is considered to perfection: from the chef's menu to the refined decor." data-tr="Səlcuq və Osmanlı memarlıq ənənələrindən ilham alan AJWA Sultanahmet otelində yerləşən Zəfəran sənətkarlıq və qüsursuz zövqün ruhunu əks etdirir. Müəllif menyusundan zərif dekora qədər hər detal mükəmməlliyə qədər düşünülmüşdür." data-ru="Расположенный в отеле AJWA Sultanahmet, вдохновлённом традициями сельджукской и османской архитектуры, ресторан Zəfəran отражает дух мастерства и безупречного вкуса. Каждая деталь здесь продумана до совершенства: от авторского меню до изящного декора." data-tk="Selçuklu ve Osmanlı mimari geleneklerinden ilham alan AJWA Sultanahmet otelinde yer alan Zeferan, ustalık ve kusursuz zevkin ruhunu yansıtır. Yazar imzalı menüden zarif dekora kadar her ayrıntı kusursuzluğa adanmıştır.">
+          Set within AJWA Sultanahmet, a hotel inspired by Seljuk and Ottoman architectural traditions, Zeferan reflects a spirit of craftsmanship and impeccable taste. Every detail here is considered to perfection: from the chef's menu to the refined decor.
+        </p>
+      </div>
+      <div class="ambiance-features">
+        <div class="ambiance-feature">
+          <span class="feature-icon">&mdash;</span>
+          <div>
+            <h4 data-en="Panoramic View" data-tr="Panoramik Mənzərə" data-ru="Панорамный вид" data-tk="Panoramik Manzara">Panoramic View</h4>
+            <p data-en="Spectacular sunsets over the Sea of Marmara and breathtaking views of the Historic Peninsula and the coastline from Kadikoy to Yesilkoy." data-tr="Mərmərə dənizi üzərində möhtəşəm günəş batımları və Tarixi Yarımada ilə Kadıköydən Yeşilköyə qədər uzanan sahil mənzərəsi." data-ru="Великолепные закаты над Мраморным морем и захватывающие виды на исторический полуостров и набережную от Кадыкёя до Ешилькёя." data-tk="Marmara Denizi üzerinde muhteşem gün batımları ve Tarihi Yarımada ile Kadıköy'den Yeşilköy'e uzanan sahili kucaklayan büyüleyici manzaralar.">Spectacular sunsets over the Sea of Marmara and breathtaking views of the Historic Peninsula and the coastline from Kadikoy to Yesilkoy.</p>
+          </div>
+        </div>
+        <div class="ambiance-feature">
+          <span class="feature-icon">&mdash;</span>
+          <div>
+            <h4 data-en="Antique Collection" data-tr="Antik Kolleksiya" data-ru="Антикварная коллекция" data-tk="Antik Koleksiyon">Antique Collection</h4>
+            <p data-en="Service ware from the early 19th century, still-life paintings by Muhammed Orujev, and a collection of Ottoman-era spoons." data-tr="XIX əsrin əvvəllərinə aid servis qabları, Muhəmməd Orucevin natürmort əsərləri və Osmanlı dövrünə aid qaşıq kolleksiyası." data-ru="Сервировочная посуда начала XIX века, натюрморты работы Мухаммеда Оруджева, коллекция ложек османской эпохи." data-tk="19. yüzyıl başına ait servis takımları, Muhammed Orucev imzalı natürmortlar ve Osmanlı dönemi kaşık koleksiyonu.">Service ware from the early 19th century, still-life paintings by Muhammed Orujev, and a collection of Ottoman-era spoons.</p>
+          </div>
+        </div>
+        <div class="ambiance-feature">
+          <span class="feature-icon">&mdash;</span>
+          <div>
+            <h4 data-en="Elegant Interior" data-tr="Zərif İnteryer" data-ru="Элегантный интерьер" data-tk="Zarif İç Mekan">Elegant Interior</h4>
+            <p data-en="Handwoven Azerbaijani carpets, walnut furniture with mother-of-pearl inlay, and ornamental hand-painted ceiling motifs." data-tr="Əl ilə toxunmuş Azərbaycan xalçaları, sədəf işləməli qoz ağacı mebeli və tavanda əl ilə çəkilmiş naxış motivləri." data-ru="Азербайджанские ковры ручной работы, ореховая мебель с перламутровыми инкрустациями, орнаментальная ручная роспись на потолке." data-tk="El dokuması Azerbaycan halıları, sedef kakmalı ceviz mobilyalar ve tavanda el ile çizilmiş süs motifleri.">Handwoven Azerbaijani carpets, walnut furniture with mother-of-pearl inlay, and ornamental hand-painted ceiling motifs.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Testimonials Section -->
+  <section class="testimonials" id="testimonials">
+    <div class="testimonials-header">
+      <p class="section-label" data-en="Guest Reviews" data-tr="Qonaq Rəyləri" data-ru="Отзывы гостей" data-tk="Misafir Yorumları">Guest Reviews</p>
+      <h2 class="testimonials-heading" data-en="Words from our &lt;em&gt;guests&lt;/em&gt;" data-tr="&lt;em&gt;Qonaqlarımızdan&lt;/em&gt; sözlər" data-ru="Слова наших &lt;em&gt;гостей&lt;/em&gt;" data-tk="&lt;em&gt;Misafirlerimizden&lt;/em&gt; sözler">Words from our <em>guests</em></h2>
+    </div>
+    <div class="testimonials-columns">
+      <!-- Column 1 -->
+      <div class="testimonials-column testimonials-col-1">
+        <div class="testimonials-scroll">
+          <div class="testimonial-card">
+            <p class="testimonial-text" data-en="The atmosphere is enchanting — the view of the Blue Mosque and Hagia Sophia illuminated at night while dining on exceptional Azerbaijani cuisine. A truly unforgettable experience." data-tr="Atmosfer büyüleyici — gecə işıqlandırılmış Sultanahmet Camii və Ayasofya mənzərəsi ilə əla Azərbaycan mətbəxi. Həqiqətən unudulmaz təcrübə." data-ru="Атмосфера завораживает — вид на Голубую мечеть и Айя-Софию в ночной подсветке за ужином с изысканной азербайджанской кухней. Поистине незабываемый опыт." data-tk="Atmosfer büyüleyici — gece aydınlatılmış Sultanahmet Camii ve Ayasofya manzarası eşliğinde muhteşem Azerbaycan mutfağı. Gerçekten unutulmaz bir deneyim.">The atmosphere is enchanting — the view of the Blue Mosque and Hagia Sophia illuminated at night while dining on exceptional Azerbaijani cuisine. A truly unforgettable experience.</p>
+            <div class="testimonial-author">
+              <div>
+                <span class="testimonial-name">Elena V.</span>
+                <span class="testimonial-role" data-en="Travel Writer" data-tr="Səyahət Yazıçısı" data-ru="Тревел-журналист" data-tk="Seyahat Yazarı">Travel Writer</span>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-card">
+            <p class="testimonial-text" data-en="Ibrahim and the staff made us feel at home. The Shah Plov ceremony — cracking open the pastry dome at the table — was the highlight of our Istanbul trip." data-tr="İbrahim və heyət bizi evdəki kimi hiss etdirdi. Şah Pilavı mərasimi — masada xəmir qübbəsinin qırılması — İstanbul səyahətimizin ən yaddaqalan anı oldu." data-ru="Ибрагим и персонал заставили нас чувствовать себя как дома. Церемония Шах-плова — разбивание тестяного купола за столом — стала главным событием нашей поездки в Стамбул." data-tk="İbrahim ve ekip bizi evimizde gibi hissettirdi. Şah Pilav seremonisi — masada hamur kubbesinin kırılması — İstanbul seyahatimizin en unutulmaz anıydı.">Ibrahim and the staff made us feel at home. The Shah Plov ceremony — cracking open the pastry dome at the table — was the highlight of our Istanbul trip.</p>
+            <div class="testimonial-author">
+              <div>
+                <span class="testimonial-name">Mehmet K.</span>
+                <span class="testimonial-role" data-en="Architect, Baku" data-tr="Memar, Bakı" data-ru="Архитектор, Баку" data-tk="Mimar, Bakü">Architect, Baku</span>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-card">
+            <p class="testimonial-text" data-en="The antique plates, the copper craftsmanship, the handwoven carpets — every detail tells a story. And the Piti was perfection." data-tr="Antik boşqablar, mis sənətkarlığı, əl toxunuşlu xalçalar — hər detal bir hekayə danışır. Və Piti mükəmməl idi." data-ru="Антикварные тарелки, медное мастерство, ручные ковры — каждая деталь рассказывает историю. А Пити было совершенством." data-tk="Antik tabaklar, bakır işçiliği, el dokuması halılar — her detay bir hikaye anlatıyor. Ve Piti mükemmeldi.">The antique plates, the copper craftsmanship, the handwoven carpets — every detail tells a story. And the Piti was perfection.</p>
+            <div class="testimonial-author">
+              <div>
+                <span class="testimonial-name">Sophie L.</span>
+                <span class="testimonial-role" data-en="Food Critic" data-tr="Yemək Tənqidçisi" data-ru="Ресторанный критик" data-tk="Yemek Eleştirmeni">Food Critic</span>
+              </div>
+            </div>
+          </div>
+          <!-- Duplicate for loop -->
+          <div class="testimonial-card" aria-hidden="true">
+            <p class="testimonial-text">The atmosphere is enchanting — the view of the Blue Mosque and Hagia Sophia illuminated at night while dining on exceptional Azerbaijani cuisine. A truly unforgettable experience.</p>
+            <div class="testimonial-author">
+              <div><span class="testimonial-name">Elena V.</span><span class="testimonial-role">Travel Writer</span></div>
+            </div>
+          </div>
+          <div class="testimonial-card" aria-hidden="true">
+            <p class="testimonial-text">Ibrahim and the staff made us feel at home. The Shah Plov ceremony — cracking open the pastry dome at the table — was the highlight of our Istanbul trip.</p>
+            <div class="testimonial-author">
+              <div><span class="testimonial-name">Mehmet K.</span><span class="testimonial-role">Architect, Baku</span></div>
+            </div>
+          </div>
+          <div class="testimonial-card" aria-hidden="true">
+            <p class="testimonial-text">The antique plates, the copper craftsmanship, the handwoven carpets — every detail tells a story. And the Piti was perfection.</p>
+            <div class="testimonial-author">
+              <div><span class="testimonial-name">Sophie L.</span><span class="testimonial-role">Food Critic</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Column 2 -->
+      <div class="testimonials-column testimonials-col-2">
+        <div class="testimonials-scroll">
+          <div class="testimonial-card">
+            <p class="testimonial-text" data-en="We celebrated our anniversary here. The panoramic sea view, the exquisite service by Erol Karabas, and the seven-course tasting menu — everything was impeccable." data-tr="Evlilik ildönümümüzü burada qeyd etdik. Panoramik dəniz mənzərəsi, Erol Karabaşın əla xidməti və yeddi çeşid dadma menyusu — hər şey qüsursuz idi." data-ru="Мы отпраздновали годовщину здесь. Панорамный вид на море, изысканный сервис Эрола Карабаша и дегустационное меню из семи блюд — всё было безупречно." data-tk="Evlilik yıl dönümümüzü burada kutladık. Panoramik deniz manzarası, Erol Karabaş'ın mükemmel hizmeti ve yedi çeşit tadım menüsü — her şey kusursuzdu.">We celebrated our anniversary here. The panoramic sea view, the exquisite service by Erol Karabas, and the seven-course tasting menu — everything was impeccable.</p>
+            <div class="testimonial-author">
+              <div>
+                <span class="testimonial-name">James &amp; Aylin R.</span>
+                <span class="testimonial-role" data-en="Anniversary Guests" data-tr="İl Dönümü Qonaqları" data-ru="Гости на юбилей" data-tk="Yıl Dönümü Misafirleri">Anniversary Guests</span>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-card">
+            <p class="testimonial-text" data-en="The Sac Kebabi ceremony is pure theater. Watching the chef work the iron plate tableside, the sizzle, the aroma — it's education and entertainment in one." data-tr="Sac Kebabı mərasimi saf teatrdır. Şefin masa başında dəmir boşqabda işləməsini, cızırtını, aromasını izləmək — həm təhsil, həm əyləncə." data-ru="Церемония Сач-кебаба — чистый театр. Наблюдать, как шеф работает на железной сковороде у стола, шипение, аромат — это и обучение, и развлечение одновременно." data-tk="Sac Kebabı seremonisi saf tiyatrodur. Şefin masa başında demir sac üzerinde çalışmasını, cızırtıyı, aromayı izlemek — hem eğitim, hem eğlence.">The Sac Kebabi ceremony is pure theater. Watching the chef work the iron plate tableside, the sizzle, the aroma — it's education and entertainment in one.</p>
+            <div class="testimonial-author">
+              <div>
+                <span class="testimonial-name">Zeynep A.</span>
+                <span class="testimonial-role" data-en="Chef, Ankara" data-tr="Şef, Ankara" data-ru="Шеф-повар, Анкара" data-tk="Şef, Ankara">Chef, Ankara</span>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-card">
+            <p class="testimonial-text" data-en="Dining at the terrace overlooking the Bosphorus and the historic peninsula at sunset — there's simply nothing else like it in Istanbul." data-tr="Günbatımında Boğazı və tarixi yarımadanı seyr edən terasta yemək — İstanbulda buna bənzər başqa heç nə yoxdur." data-ru="Ужин на террасе с видом на Босфор и исторический полуостров на закате — в Стамбуле просто нет ничего подобного." data-tk="Gün batımında Boğaz ve tarihi yarımadayı seyreden terasta yemek — İstanbul'da buna benzer başka hiçbir şey yok.">Dining at the terrace overlooking the Bosphorus and the historic peninsula at sunset — there's simply nothing else like it in Istanbul.</p>
+            <div class="testimonial-author">
+              <div>
+                <span class="testimonial-name">Lara T.</span>
+                <span class="testimonial-role" data-en="Photographer" data-tr="Fotoqraf" data-ru="Фотограф" data-tk="Fotoğrafçı">Photographer</span>
+              </div>
+            </div>
+          </div>
+          <!-- Duplicate for loop -->
+          <div class="testimonial-card" aria-hidden="true">
+            <p class="testimonial-text">We celebrated our anniversary here. The panoramic sea view, the exquisite service by Erol Karabas, and the seven-course tasting menu — everything was impeccable.</p>
+            <div class="testimonial-author">
+              <div><span class="testimonial-name">James &amp; Aylin R.</span><span class="testimonial-role">Anniversary Guests</span></div>
+            </div>
+          </div>
+          <div class="testimonial-card" aria-hidden="true">
+            <p class="testimonial-text">The Sac Kebabi ceremony is pure theater. Watching the chef work the iron plate tableside, the sizzle, the aroma — it's education and entertainment in one.</p>
+            <div class="testimonial-author">
+              <div><span class="testimonial-name">Zeynep A.</span><span class="testimonial-role">Chef, Ankara</span></div>
+            </div>
+          </div>
+          <div class="testimonial-card" aria-hidden="true">
+            <p class="testimonial-text">Dining at the terrace overlooking the Bosphorus and the historic peninsula at sunset — there's simply nothing else like it in Istanbul.</p>
+            <div class="testimonial-author">
+              <div><span class="testimonial-name">Lara T.</span><span class="testimonial-role">Photographer</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Column 3 -->
+      <div class="testimonials-column testimonials-col-3">
+        <div class="testimonials-scroll">
+          <div class="testimonial-card">
+            <p class="testimonial-text" data-en="As an Azerbaijani living abroad, finding this level of authenticity in Istanbul moved me deeply. The Gurza tasted exactly like my grandmother's recipe." data-tr="Xaricdə yaşayan bir Azərbaycanlı olaraq İstanbulda bu səviyyədə otantiklik tapmaq məni dərindən heyran etdi. Gürzə tam nənəmin resepti kimi idi." data-ru="Как азербайджанец, живущий за границей, найти такой уровень аутентичности в Стамбуле глубоко тронуло меня. Гюрза была точно такой, как по рецепту моей бабушки." data-tk="Yurt dışında yaşayan bir Azerbaycanlı olarak İstanbul'da bu düzeyde otantiklik bulmak beni derinden etkiledi. Gürzə tam büyükannemin tarifi gibiydi.">As an Azerbaijani living abroad, finding this level of authenticity in Istanbul moved me deeply. The Gurza tasted exactly like my grandmother's recipe.</p>
+            <div class="testimonial-author">
+              <div>
+                <span class="testimonial-name">Farid M.</span>
+                <span class="testimonial-role" data-en="Guest from Baku" data-tr="Bakıdan Qonaq" data-ru="Гость из Баку" data-tk="Bakü'den Misafir">Guest from Baku</span>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-card">
+            <p class="testimonial-text" data-en="Recommended by our hotel concierge as a 'must' — they were right. We ranked it the best meal of our two-week Turkey trip without hesitation." data-tr="Otel concierge'imiz 'mütləq gedin' dedi — haqlı imiş. İki həftəlik Türkiyə səyahətimizin ən yaxşı yeməyi olaraq tərəddüdsüz seçdik." data-ru="Наш консьерж порекомендовал его как 'обязательное место' — и был прав. Мы без колебаний назвали его лучшим ужином за двухнедельную поездку по Турции." data-tk="Otel concierge'miz 'kesinlikle gidin' dedi — haklıymış. İki haftalık Türkiye seyahatimizin en iyi yemeği olarak tereddütsüz seçtik.">Recommended by our hotel concierge as a 'must' — they were right. We ranked it the best meal of our two-week Turkey trip without hesitation.</p>
+            <div class="testimonial-author">
+              <div>
+                <span class="testimonial-name">Maria &amp; David S.</span>
+                <span class="testimonial-role" data-en="Guests from London" data-tr="Londondan Qonaqlar" data-ru="Гости из Лондона" data-tk="Londra'dan Misafirler">Guests from London</span>
+              </div>
+            </div>
+          </div>
+          <div class="testimonial-card">
+            <p class="testimonial-text" data-en="The Azerbaijani tea ceremony with the copper samovar after dinner was the perfect ending. Such attention to tradition — you can feel the reverence in every detail." data-tr="Yemək sonrası mis semaverlə Azərbaycan çay mərasimi mükəmməl bir son idi. Ənənəyə belə diqqət — hər detayda hörmət hiss olunur." data-ru="Азербайджанская чайная церемония с медным самоваром после ужина стала идеальным завершением. Такое внимание к традициям — вы чувствуете почтение в каждой детали." data-tk="Yemek sonrası bakır semaver ile Azerbaycan çay seremonisi mükemmel bir son oldu. Geleneğe böylesine dikkat — her detayda saygı hissediliyor.">The Azerbaijani tea ceremony with the copper samovar after dinner was the perfect ending. Such attention to tradition — you can feel the reverence in every detail.</p>
+            <div class="testimonial-author">
+              <div>
+                <span class="testimonial-name">Kenji H.</span>
+                <span class="testimonial-role" data-en="Culinary Journalist, Tokyo" data-tr="Kulinariya Jurnalisti, Tokio" data-ru="Кулинарный журналист, Токио" data-tk="Mutfak Gazetecisi, Tokyo">Culinary Journalist, Tokyo</span>
+              </div>
+            </div>
+          </div>
+          <!-- Duplicate for loop -->
+          <div class="testimonial-card" aria-hidden="true">
+            <p class="testimonial-text">As an Azerbaijani living abroad, finding this level of authenticity in Istanbul moved me deeply. The Gurza tasted exactly like my grandmother's recipe.</p>
+            <div class="testimonial-author">
+              <div><span class="testimonial-name">Farid M.</span><span class="testimonial-role">Guest from Baku</span></div>
+            </div>
+          </div>
+          <div class="testimonial-card" aria-hidden="true">
+            <p class="testimonial-text">Recommended by our hotel concierge as a 'must' — they were right. We ranked it the best meal of our two-week Turkey trip without hesitation.</p>
+            <div class="testimonial-author">
+              <div><span class="testimonial-name">Maria &amp; David S.</span><span class="testimonial-role">Guests from London</span></div>
+            </div>
+          </div>
+          <div class="testimonial-card" aria-hidden="true">
+            <p class="testimonial-text">The Azerbaijani tea ceremony with the copper samovar after dinner was the perfect ending. Such attention to tradition — you can feel the reverence in every detail.</p>
+            <div class="testimonial-author">
+              <div><span class="testimonial-name">Kenji H.</span><span class="testimonial-role">Culinary Journalist, Tokyo</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+      </div>
+    </div>
+  </div>
+  <!-- /horizontal-scroll wrapper -->
+
+  <!-- Reservation Section -->
+  <section class="reservation" id="reservation">
+    <div class="reservation-inner">
+      <p class="section-label section-label--light" data-en="Reservation" data-tr="Rezervasiya" data-ru="Бронирование" data-tk="Rezervasyon">Reservation</p>
+      <h2 class="reservation-heading" data-en="Choose the moment,&lt;br&gt;&lt;em&gt;then the table&lt;/em&gt;" data-tr="Anı seçin,&lt;br&gt;&lt;em&gt;sonra masanı&lt;/em&gt;" data-ru="Выберите время&lt;br&gt;&lt;em&gt;и столик&lt;/em&gt;" data-tk="Önce anı seçin,&lt;br&gt;&lt;em&gt;sonra masayı&lt;/em&gt;">Choose the moment,<br><em>then the table</em></h2>
+      <div class="reservation-moments" aria-label="Reservation experience highlights">
+        <span data-en="Golden hour terrace" data-tr="Gün batımı terası" data-ru="Столик с видом на закат" data-tk="Gün batımı terası">Golden hour terrace</span>
+        <span data-en="Shah Pilaf ceremony" data-tr="Şah Plov mərasimi" data-ru="Церемония подачи шах-плова" data-tk="Şah Pilav seremonisi">Shah Pilaf ceremony</span>
+        <span data-en="Priority valet" data-tr="Prioritetli vale" data-ru="Валет-парковка" data-tk="Öncelikli vale">Priority valet</span>
+      </div>
+
+      <!-- Booking System -->
+      <form class="booking-system" id="booking-system" novalidate aria-label="Reservation booking" data-aria-label-en="Reservation booking" data-aria-label-tr="Masa rezervasiyası" data-aria-label-ru="Бронирование столика" data-aria-label-tk="Masa rezervasyonu">
+
+        <!-- Step Indicator -->
+        <div class="booking-steps">
+          <div class="booking-step active" data-step="1">
+            <span class="step-number">01</span>
+            <span class="step-label" data-en="Date &amp; Time" data-tr="Tarix &amp; Saat" data-ru="Дата и время" data-tk="Tarih &amp; Saat">Date &amp; Time</span>
+          </div>
+          <div class="step-line"></div>
+          <div class="booking-step" data-step="2">
+            <span class="step-number">02</span>
+            <span class="step-label" data-en="Table" data-tr="Masa" data-ru="Стол" data-tk="Masa">Table</span>
+          </div>
+          <div class="step-line"></div>
+          <div class="booking-step" data-step="3">
+            <span class="step-number">03</span>
+            <span class="step-label" data-en="Details" data-tr="Məlumatlar" data-ru="Детали" data-tk="Bilgiler">Details</span>
+          </div>
+          <div class="step-line"></div>
+          <div class="booking-step" data-step="4">
+            <span class="step-number">04</span>
+            <span class="step-label" data-en="Confirm" data-tr="Təsdiq" data-ru="Подтверждение" data-tk="Onay">Confirm</span>
+          </div>
+        </div>
+
+        <!-- Step 1: Date, Time & Guests -->
+        <div class="booking-panel active" id="step-1">
+          <div class="booking-form-grid">
+            <div class="form-group">
+              <label for="booking-date" data-en="Date" data-tr="Tarix" data-ru="Дата" data-tk="Tarih">Date</label>
+              <div class="booking-date-wrapper">
+                <input type="date" id="booking-date" class="booking-input" min="" required aria-required="true" />
+                <button type="button" class="booking-date-icon" id="booking-date-btn" aria-label="Open calendar" data-aria-label-en="Open calendar" data-aria-label-tr="Təqvimi aç" data-aria-label-ru="Открыть календарь" data-aria-label-tk="Takvimi aç">
+                  <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                    <rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+                    <line x1="16" y1="2" x2="16" y2="6"></line>
+                    <line x1="8" y1="2" x2="8" y2="6"></line>
+                    <line x1="3" y1="10" x2="21" y2="10"></line>
+                  </svg>
+                </button>
+              </div>
+            </div>
+            <div class="form-group">
+              <label for="booking-guests" data-en="Guests" data-tr="Qonaq Sayı" data-ru="Гости" data-tk="Misafir Sayısı">Guests</label>
+              <select id="booking-guests" class="booking-input" required aria-required="true">
+                <option value="1">1</option>
+                <option value="2" selected>2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+                <option value="11">11</option>
+                <option value="12">12+</option>
+              </select>
+            </div>
+          </div>
+          <div class="form-group" role="group" aria-labelledby="time-section-label">
+            <span id="time-section-label" class="form-group-heading" data-en="Preferred Time" data-tr="Tercih Edilən Vaxt" data-ru="Предпочтительное время" data-tk="Tercih Edilen Saat">Preferred Time</span>
+            <p class="time-slots-note" data-en="Open daily 07:30 - 23:00" data-tr="Hər gün 07:30 - 23:00 arası açıqdır" data-ru="Открыто ежедневно 07:30 - 23:00" data-tk="Her gün 07:30 - 23:00 arası açık">Open daily 07:30 - 23:00</p>
+            <div class="time-slots-sections">
+              <div class="time-section">
+                <span class="time-section-label" data-en="Breakfast" data-tr="Səhər yeməyi" data-ru="Завтрак" data-tk="Kahvaltı">Breakfast</span>
+                <div class="time-slots">
+                  <button type="button" class="time-slot" data-time="07:30">07:30</button>
+                  <button type="button" class="time-slot" data-time="08:00">08:00</button>
+                  <button type="button" class="time-slot" data-time="09:00">09:00</button>
+                  <button type="button" class="time-slot" data-time="10:00">10:00</button>
+                </div>
+              </div>
+              <div class="time-section">
+                <span class="time-section-label" data-en="Lunch" data-tr="Nahar" data-ru="Обед" data-tk="Öğle Yemeği">Lunch</span>
+                <div class="time-slots">
+                  <button type="button" class="time-slot" data-time="11:00">11:00</button>
+                  <button type="button" class="time-slot" data-time="12:00">12:00</button>
+                  <button type="button" class="time-slot" data-time="13:00">13:00</button>
+                  <button type="button" class="time-slot" data-time="14:00">14:00</button>
+                  <button type="button" class="time-slot" data-time="15:00">15:00</button>
+                  <button type="button" class="time-slot" data-time="16:00">16:00</button>
+                </div>
+              </div>
+              <div class="time-section">
+                <span class="time-section-label" data-en="Dinner" data-tr="Axşam yeməyi" data-ru="Ужин" data-tk="Akşam Yemeği">Dinner</span>
+                <div class="time-slots">
+                  <button type="button" class="time-slot" data-time="17:00">17:00</button>
+                  <button type="button" class="time-slot" data-time="18:00">18:00</button>
+                  <button type="button" class="time-slot" data-time="19:00">19:00</button>
+                  <button type="button" class="time-slot" data-time="20:00">20:00</button>
+                  <button type="button" class="time-slot" data-time="21:00">21:00</button>
+                  <button type="button" class="time-slot" data-time="22:00">22:00</button>
+                  <button type="button" class="time-slot" data-time="23:00">23:00</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="booking-nav-btns" style="justify-content:flex-end">
+            <button type="button" class="booking-next-btn" id="btn-step-1" disabled data-en="Continue" data-tr="Davam" data-ru="Далее" data-tk="Devam">Continue</button>
+          </div>
+        </div>
+
+        <!-- Step 2: Table Selection -->
+        <div class="booking-panel" id="step-2">
+          <div class="table-selection">
+            <div class="floor-plan-wrap" id="floor-plan-wrap">
+              <img src="" data-src="your-repo/Reservation/Restaurant.png" alt="Restaurant Floor Plan" class="floor-plan-img" id="floor-plan-img" draggable="false" loading="lazy" decoding="async" data-alt-en="Restaurant floor plan" data-alt-tr="Restoran masa planı" data-alt-ru="План зала ресторана" data-alt-tk="Restoran masa planı">
+            </div>
+            <div class="table-info-panel" id="table-info-panel">
+              <div class="table-info-placeholder" id="table-placeholder">
+                <div class="table-placeholder-icon">
+                  <svg viewBox="0 0 24 24" width="32" height="32" fill="none" stroke="var(--gold)" stroke-width="1.5"><path d="M3 12h18M3 6h18M3 18h18" stroke-linecap="round"/></svg>
+                </div>
+                <p data-en="Select a table from the floor plan" data-tr="Plandan bir masa seçin" data-ru="Выберите стол на плане зала" data-tk="Kat planından bir masa seçin">Select a table from the floor plan</p>
+                <span class="table-legend">
+                  <span class="legend-dot legend-available"></span> <span data-en="Available" data-tr="Boş" data-ru="Свободно" data-tk="Müsait">Available</span>
+                  <span class="legend-dot legend-occupied"></span> <span data-en="Reserved" data-tr="Tutulmuş" data-ru="Занято" data-tk="Dolu">Reserved</span>
+                  <span class="legend-dot legend-selected"></span> <span data-en="Selected" data-tr="Seçilmiş" data-ru="Выбрано" data-tk="Seçili">Selected</span>
+                </span>
+              </div>
+              <div class="table-info-detail" id="table-info-detail" style="display:none">
+                <h3 id="table-info-name"></h3>
+                <div class="table-info-meta">
+                  <span class="table-info-capacity" id="table-info-capacity"></span>
+                  <span class="table-info-area" id="table-info-area"></span>
+                </div>
+                <p class="table-info-desc" id="table-info-desc"></p>
+              </div>
+              <div class="booking-nav-btns">
+                <button type="button" class="booking-back-btn" id="back-step-2" data-en="Back" data-tr="Geriyə" data-ru="Назад" data-tk="Geri">Back</button>
+                <button type="button" class="booking-next-btn" id="btn-step-2" disabled data-en="Continue" data-tr="Davam" data-ru="Далее" data-tk="Devam">Continue</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Step 3: Guest Details -->
+        <div class="booking-panel" id="step-3">
+          <div class="booking-form-grid">
+            <div class="form-group">
+              <label for="booking-name" data-en="Full Name" data-tr="Ad Soyad" data-ru="Полное имя" data-tk="Ad Soyad">Full Name</label>
+              <input type="text" id="booking-name" class="booking-input" autocomplete="name" required aria-required="true" placeholder="" />
+            </div>
+            <div class="form-group">
+              <label for="booking-phone" data-en="Phone" data-tr="Telefon" data-ru="Телефон" data-tk="Telefon">Phone</label>
+              <input type="tel" id="booking-phone" class="booking-input" autocomplete="tel" required aria-required="true" placeholder="+90" />
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="booking-email" data-en="Email" data-tr="E-poçt" data-ru="Эл. почта" data-tk="E-posta">Email</label>
+            <input type="email" id="booking-email" class="booking-input" autocomplete="email" required aria-required="true" />
+          </div>
+          <div class="form-group">
+            <label for="booking-plate" data-en="Vehicle Plate (optional)" data-tr="Avtomobil Nömrəsi (könüllü)" data-ru="Номер автомобиля (необязательно)" data-tk="Araç Plakası (opsiyonel)">Vehicle Plate (optional)</label>
+            <input type="text" id="booking-plate" class="booking-input" maxlength="20" autocomplete="off" style="text-transform:uppercase" />
+            <p class="form-hint" data-en="You may add your vehicle plate for priority valet access and a faster arrival." data-tr="Öncəlikli parklama girişi və sürətli qarşılama üçün avtomobil nömrənizi əlavə edə bilərsiniz." data-ru="Вы можете указать номер автомобиля для приоритетного въезда и быстрой встречи." data-tk="Öncelikli otopark erişimi ve hızlı giriş için araç plakanızı ekleyebilirsiniz.">Öncelikli otopark erişimi ve hızlı giriş için araç plakanızı ekleyebilirsiniz.</p>
+          </div>
+          <div class="form-group" role="group" aria-labelledby="occasion-section-label">
+            <span id="occasion-section-label" class="form-group-heading" data-en="Occasion" data-tr="Xüsusi Gün" data-ru="Повод" data-tk="Özel Gün">Occasion</span>
+            <div class="occasion-tags" id="occasion-tags">
+              <button type="button" class="occasion-tag" data-occasion="none" data-en="None" data-tr="Yox" data-ru="Нет" data-tk="Yok">None</button>
+              <button type="button" class="occasion-tag" data-occasion="birthday" data-en="Birthday" data-tr="Ad Günü" data-ru="День рождения" data-tk="Doğum Günü">Birthday</button>
+              <button type="button" class="occasion-tag" data-occasion="anniversary" data-en="Anniversary" data-tr="İl Dönümü" data-ru="Годовщина" data-tk="Yıl Dönümü">Anniversary</button>
+              <button type="button" class="occasion-tag" data-occasion="proposal" data-en="Proposal" data-tr="Evlilik Təklifi" data-ru="Предложение" data-tk="Evlilik Teklifi">Proposal</button>
+              <button type="button" class="occasion-tag" data-occasion="business" data-en="Business" data-tr="İş Yeməyi" data-ru="Деловой ужин" data-tk="İş Yemeği">Business</button>
+            </div>
+          </div>
+          <div class="form-group">
+            <label for="booking-notes" data-en="Dietary Requirements &amp; Notes" data-tr="Pəhriz &amp; Qeydlər" data-ru="Диета и примечания" data-tk="Diyet &amp; Notlar">Dietary Requirements &amp; Notes</label>
+            <textarea id="booking-notes" class="booking-input booking-textarea" rows="2" data-placeholder-en="Allergies, dietary restrictions, or special requests..." data-placeholder-tr="Allergiyalar, pəhriz məhdudiyyətləri və ya xüsusi istəklər..." data-placeholder-ru="Аллергии, диетические ограничения или особые пожелания..." data-placeholder-tk="Alerjiler, diyet kısıtlamaları veya özel istekler..." placeholder="Allergies, dietary restrictions, or special requests..."></textarea>
+          </div>
+          <p class="form-retention-note" data-en="The information you provide will be removed from our system within 6 hours after your check-in is completed." data-tr="Təqdim etdiyiniz məlumatlar qarşılanmanız tamamlandıqdan sonra 6 saat ərzində sistemimizdən silinir." data-ru="Введённые вами данные будут удалены из нашей системы в течение 6 часов после вашего прибытия." data-tk="Girmiş olduğunuz bilgiler, girişiniz tamamlandıktan sonra 6 saat içinde sistemimizden kaldırılır.">Girmiş olduğunuz bilgiler, girişiniz tamamlandıktan sonra 6 saat içinde sistemimizden kaldırılır.</p>
+          <div class="booking-nav-btns">
+            <button type="button" class="booking-back-btn" id="back-step-3" data-en="Back" data-tr="Geriyə" data-ru="Назад" data-tk="Geri">Back</button>
+            <button type="button" class="booking-next-btn" id="btn-step-3" disabled data-en="Review Booking" data-tr="Rezervasiyanı Yoxla" data-ru="Проверить бронь" data-tk="Rezervasyonu İncele">Review Booking</button>
+          </div>
+        </div>
+
+        <!-- Step 4: Confirmation -->
+        <div class="booking-panel" id="step-4">
+          <div class="confirmation-summary">
+            <div class="confirm-icon">&#10003;</div>
+            <h3 data-en="Reservation Summary" data-tr="Rezervasiya Xülasəsi" data-ru="Итог бронирования" data-tk="Rezervasyon Özeti">Reservation Summary</h3>
+            <div class="confirm-details" id="confirm-details"></div>
+            <p class="confirm-note" data-en="A confirmation will be sent to your email. We may contact you 24 hours before your visit to confirm dietary requirements." data-tr="E-poçtunuza təsdiq göndəriləcək. Ziyarətinizdən 24 saat əvvəl pəhriz tələblərinizi təsdiqləmək üçün sizinlə əlaqə saxlaya bilərik." data-ru="Подтверждение будет отправлено на вашу почту. Мы можем связаться с вами за 24 часа до визита для уточнения диетических требований." data-tk="E-postanıza onay gönderilecektir. Ziyaretinizden 24 saat önce diyet gereksinimlerinizi onaylamak için sizinle iletişime geçebiliriz.">A confirmation will be sent to your email. We may contact you 24 hours before your visit to confirm dietary requirements.</p>
+            <div class="confirm-policy" data-en="Cancellation: Free up to 48 hours prior to arrival. Late cancellations may incur a fee." data-tr="Ləğv: 48 saat əvvələ qədər pulsuzdur. Gecikmiş ləğvlər ödənişli ola bilər." data-ru="Отмена: бесплатно за 48 часов. Поздняя отмена может быть платной." data-tk="İptal: 48 saat öncesine kadar ücretsiz. Geç iptaller ücrete tabi olabilir.">Cancellation: Free up to 48 hours prior to arrival. Late cancellations may incur a fee.</div>
+          </div>
+          <div class="booking-nav-btns">
+            <button type="button" class="booking-back-btn" id="back-step-4" data-en="Edit" data-tr="Redaktə" data-ru="Изменить" data-tk="Düzenle">Edit</button>
+            <button type="button" class="booking-next-btn booking-confirm-btn" id="btn-confirm" data-en="Confirm Reservation" data-tr="Rezervasiyanı Təsdiq Et" data-ru="Подтвердить бронирование" data-tk="Rezervasyonu Onayla">Confirm Reservation</button>
+          </div>
+        </div>
+
+        <!-- Success State -->
+        <div class="booking-panel" id="step-success" style="display:none">
+          <div class="booking-success">
+            <div class="success-icon">&#10003;</div>
+            <h3 data-en="Reservation Confirmed" data-tr="Rezervasiya Təsdiqləndi" data-ru="Бронирование подтверждено" data-tk="Rezervasyon Onaylandı">Reservation Confirmed</h3>
+            <p data-en="We look forward to welcoming you. A confirmation email has been sent." data-tr="Sizi qəbul etməyi səbirsizliklə gözləyirik. Təsdiq e-poçtu göndərildi." data-ru="Мы с нетерпением ждём вас. Письмо с подтверждением отправлено." data-tk="Sizi ağırlamayı sabırsızlıkla bekliyoruz. Onay e-postası gönderildi.">We look forward to welcoming you. A confirmation email has been sent.</p>
+            <div class="booking-contact-info">
+              <p>+90 212 638 22 12 &nbsp;&middot;&nbsp; info.sultanahmet@zeferan.com.tr</p>
+              <p data-en="AJWA Sultanahmet &middot; Istanbul" data-tr="AJWA Sultanahmet &middot; İstanbul" data-ru="AJWA Sultanahmet &middot; Стамбул" data-tk="AJWA Sultanahmet &middot; İstanbul">AJWA Sultanahmet &middot; Istanbul</p>
+            </div>
+          </div>
+        </div>
+
+      </form>
+    </div>
+  </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <div class="footer-logo"><img src="your-repo/Logo.webp" alt="Zeferan" class="footer-logo-img" width="1077" height="327" loading="lazy" decoding="async"></div>
+      <div class="footer-main">
+        <div class="footer-links">
+          <a href="https://www.instagram.com/zeferansultanahmet/" target="_blank" rel="noopener">Instagram</a>
+          <a href="https://www.facebook.com/ZeferanRestaurant/" target="_blank" rel="noopener">Facebook</a>
+          <a href="https://www.tripadvisor.com.tr/Restaurant_Review-g293974-d12243231-Reviews-Zeferan_Restaurant-Istanbul.html" target="_blank" rel="noopener">TripAdvisor</a>
+          <a href="https://www.youtube.com/channel/UCaGe7tcFxzjMZQXZBmAKlMQ" target="_blank" rel="noopener">YouTube</a>
+          <a href="https://wa.me/905317801412" target="_blank" rel="noopener" class="footer-link-whatsapp">WhatsApp</a>
+        </div>
+        <div class="footer-contact">
+          <p class="footer-contact-line">
+            <span class="footer-contact-value">Emin Sinan, Piyer Loti Cd. No:30, 34126 Fatih/&#304;stanbul</span>
+            <span class="footer-contact-sep" aria-hidden="true">&middot;</span>
+            <a class="footer-contact-link" href="tel:+902126382212">+90 212 638 22 12</a>
+          </p>
+          <p class="footer-legal">
+            <a href="privacy.html" data-en="Privacy Policy" data-tr="Məxfilik Siyasəti" data-ru="Политика конфиденциальности" data-tk="Gizlilik Politikası">Privacy Policy</a>
+            <span aria-hidden="true">&middot;</span>
+            <a href="kvkk.html" data-en="KVKK Notice" data-tr="KVKK Bildirişi" data-ru="Уведомление KVKK" data-tk="KVKK Aydınlatma">KVKK Notice</a>
+            <span aria-hidden="true">&middot;</span>
+            <button type="button" class="footer-cookie-link" onclick="window.zeferanConsent && window.zeferanConsent.reset();" data-en="Manage cookies" data-tr="Cookie tənzimləri" data-ru="Управление cookie" data-tk="Çerez tercihleri">Manage cookies</button>
+          </p>
+        </div>
+      </div>
+      <p class="footer-copy" data-en="&amp;copy; 2026 Zeferan Sultanahmet. All rights reserved." data-tr="&amp;copy; 2026 Zəfəran Sultanahmet. Bütün hüquqlar qorunur." data-ru="&amp;copy; 2026 Zeferan Sultanahmet. Все права защищены." data-tk="&amp;copy; 2026 Zeferan Sultanahmet. Tüm hakları saklıdır.">&copy; 2026 Zeferan Sultanahmet. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Gallery Lightbox -->
+  <div class="lightbox" id="lightbox" aria-hidden="true">
+    <button class="lightbox-close" id="lightbox-close" aria-label="Close" data-aria-label-en="Close" data-aria-label-tr="Bağla" data-aria-label-ru="Закрыть" data-aria-label-tk="Kapat">&times;</button>
+    <button class="lightbox-prev" id="lightbox-prev" aria-label="Previous" data-aria-label-en="Previous" data-aria-label-tr="Əvvəlki" data-aria-label-ru="Предыдущее" data-aria-label-tk="Önceki">&#8249;</button>
+    <button class="lightbox-next" id="lightbox-next" aria-label="Next" data-aria-label-en="Next" data-aria-label-tr="Növbəti" data-aria-label-ru="Следующее" data-aria-label-tk="Sonraki">&#8250;</button>
+    <div class="lightbox-img-wrap">
+      <img class="lightbox-img" id="lightbox-img" src="" alt="">
+    </div>
+    <p class="lightbox-caption" id="lightbox-caption"></p>
+  </div>
+
+  <script src="js/lenis.min.js?v=1.3.21" defer></script>
+  <script src="api-client.js?v=20260420b" defer></script>
+  <script src="shared-utils.min.js?v=20260606a" defer></script>
+  <script src="js/translations.js?v=20260416b" defer></script>
+  <script src="script.min.js?v=20260511a" defer></script>
+
+</body>
+</html>

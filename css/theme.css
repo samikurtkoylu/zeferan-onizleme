@@ -1,0 +1,296 @@
+/* ===================================
+   THEME — Toggle & Light Mode Overrides
+   =================================== */
+
+.theme-toggle {
+  background: none;
+  border: 1px solid var(--dark-border);
+  padding: 0;
+  cursor: pointer;
+  margin-left: 0.5rem;
+  border-radius: 20px;
+  transition: border-color 0.3s ease;
+}
+
+.theme-toggle:hover {
+  border-color: var(--gold-dark);
+}
+
+.theme-toggle-track {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 52px;
+  height: 26px;
+  padding: 0 6px;
+}
+
+.theme-toggle-icon {
+  font-size: 0.7rem;
+  line-height: 1;
+  z-index: 1;
+  transition: opacity 0.3s ease;
+}
+
+.theme-icon-dark {
+  color: var(--cream);
+  opacity: 1;
+}
+
+.theme-icon-light {
+  color: var(--text-dim);
+  opacity: 0.5;
+}
+
+.theme-toggle-thumb {
+  position: absolute;
+  top: 3px;
+  left: 3px;
+  width: 20px;
+  height: 20px;
+  background: var(--dark-surface);
+  border-radius: 50%;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+body.theme-light .theme-toggle-thumb {
+  transform: translateX(26px);
+  background: var(--gold);
+}
+
+body.theme-light .theme-icon-dark {
+  opacity: 0.5;
+}
+
+body.theme-light .theme-icon-light {
+  opacity: 1;
+  color: var(--cream);
+}
+
+/* ===== LIGHT THEME OVERRIDES ===== */
+
+body.theme-light {
+  --black: #F5F0E8;
+  --dark: #EDE8E0;
+  --dark-surface: #E5E0D8;
+  --dark-border: #D4CFC7;
+  --cream: #1A1A1A;
+  --cream-dim: #333333;
+  --text: #2A2A2A;
+  --text-dim: #666666;
+  --purple: #F5F0E8;
+  --gold: #401a58;
+  --gold-light: #401a58;
+  --gold-dark: #401a58;
+}
+
+body.theme-light .nav.scrolled {
+  background: rgba(245, 240, 232, 0.92);
+}
+
+body.theme-light .mobile-menu {
+  background: var(--black);
+}
+
+body.theme-light .lang-menu {
+  background: var(--dark);
+  border-color: var(--dark-border);
+  box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+}
+
+body.theme-light .lang-menu .lang-option:hover {
+  background: rgba(0,0,0,0.05);
+}
+
+body.theme-light .nav-toggle span {
+  background: var(--cream);
+}
+
+body.theme-light ::selection {
+  background: var(--gold);
+  color: #fff;
+}
+
+body.theme-light .nav-cta {
+  border-color: var(--gold);
+  color: var(--gold);
+}
+
+body.theme-light .nav-cta:hover {
+  background: var(--gold);
+  color: #fff;
+}
+
+body.theme-light .hero-btn {
+  border-color: var(--gold);
+  color: var(--gold);
+}
+
+body.theme-light .hero-btn:hover {
+  background: var(--gold);
+  color: #fff;
+}
+
+body.theme-light .section-label {
+  color: var(--gold);
+}
+
+body.theme-light .menu-item-price {
+  color: var(--gold);
+}
+
+body.theme-light .booking-next-btn,
+body.theme-light .booking-confirm-btn {
+  background: var(--gold);
+  color: #fff;
+}
+
+body.theme-light .footer {
+  background: #f5f0e8;
+  border-top-color: rgba(64, 26, 88, 0.18);
+}
+
+body.theme-light .footer-links a,
+body.theme-light .footer-contact-line,
+body.theme-light .footer-contact-value,
+body.theme-light .footer-contact-link,
+body.theme-light .footer-copy,
+body.theme-light .footer-legal {
+  color: #574f5d;
+}
+
+body.theme-light .footer-links a:hover {
+  color: #401a58;
+}
+
+body.theme-light .footer-links a.footer-link-whatsapp:hover {
+  color: #128c45;
+}
+
+body.theme-light .footer-contact-link:hover {
+  color: #401a58;
+}
+
+body.theme-light .footer-legal a,
+body.theme-light .footer-cookie-link {
+  color: #401a58;
+  text-decoration-color: rgba(64, 26, 88, 0.35);
+}
+
+body.theme-light .footer-legal a:hover,
+body.theme-light .footer-cookie-link:hover {
+  color: #251031;
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 3px;
+}
+
+body.theme-light .footer-cookie-link:focus-visible {
+  outline-color: #401a58;
+}
+
+/* Light mode – Floor plan purple tint */
+body.theme-light .floor-plan-img {
+  filter: hue-rotate(260deg) saturate(4) brightness(0.35) contrast(1.8);
+  opacity: 1;
+}
+
+body.theme-light .floor-plan-wrap {
+  background: transparent;
+}
+
+/* Light mode - Hero/scroll animation */
+body.theme-light .hero-overlay-gradient {
+  background:
+    linear-gradient(to top, rgba(64, 26, 88, 0.35) 0%, rgba(64, 26, 88, 0.12) 40%, transparent 70%);
+}
+
+body.theme-light .hero-title,
+body.theme-light .scroll-text h2 {
+  color: #1A1A1A;
+  text-shadow: 0 2px 20px rgba(245, 240, 232, 0.7), 0 0 40px rgba(245, 240, 232, 0.4);
+}
+
+body.theme-light .hero-title em,
+body.theme-light .scroll-text h2 em {
+  color: #401a58;
+}
+
+body.theme-light .hero-subtitle {
+  color: #1A1A1A;
+  text-shadow: 0 1px 12px rgba(245, 240, 232, 0.7);
+}
+
+body.theme-light .hero-tagline {
+  color: #401a58;
+  text-shadow: 0 1px 10px rgba(245, 240, 232, 0.7);
+}
+
+body.theme-light .scroll-label {
+  color: #2a0f3d;
+  text-shadow: 0 1px 10px rgba(245, 240, 232, 0.7);
+}
+
+body.theme-light .hero-scroll-hint span {
+  color: #1A1A1A;
+  text-shadow: 0 1px 10px rgba(245, 240, 232, 0.7);
+}
+
+body.theme-light .story-next-link {
+  border-color: rgba(64, 26, 88, 0.28);
+  background: rgba(255, 255, 255, 0.6);
+}
+
+body.theme-light .story-next-link:hover {
+  border-color: rgba(64, 26, 88, 0.55);
+  background: rgba(64, 26, 88, 0.08);
+}
+
+/* Light mode - menu section top peek */
+body.theme-light .menu {
+  background:
+    linear-gradient(180deg, rgba(64, 26, 88, 0.14) 0%, rgba(64, 26, 88, 0.04) 200px, rgba(64, 26, 88, 0) 360px),
+    var(--dark);
+  border-top: 1px solid rgba(64, 26, 88, 0.32);
+  box-shadow:
+    0 -40px 80px rgba(64, 26, 88, 0.15),
+    0 -1px 0 rgba(64, 26, 88, 0.18);
+}
+
+body.theme-light .menu::before {
+  background: linear-gradient(90deg, transparent, rgba(184, 134, 11, 0.95), transparent);
+  height: 2px;
+}
+
+body.theme-light .table-btn:hover {
+  background: radial-gradient(ellipse at center, rgba(64, 26, 88, 0.22) 0%, rgba(64, 26, 88, 0.08) 50%, transparent 75%);
+  box-shadow: 0 0 24px 12px rgba(64, 26, 88, 0.18), 0 0 60px 30px rgba(64, 26, 88, 0.06);
+  color: transparent;
+}
+
+body.theme-light .table-btn.selected {
+  background: radial-gradient(ellipse at center, rgba(64, 26, 88, 0.32) 0%, rgba(64, 26, 88, 0.12) 50%, transparent 75%);
+  box-shadow: 0 0 30px 16px rgba(64, 26, 88, 0.25), 0 0 70px 35px rgba(64, 26, 88, 0.08);
+  color: transparent;
+}
+
+body.theme-light .table-btn.service-closed {
+  background: rgba(120, 120, 120, 0.14) !important;
+  color: rgba(96, 96, 96, 0.72);
+}
+
+body.theme-light .table-btn.service-closed:hover {
+  background: radial-gradient(ellipse at center, rgba(156, 156, 156, 0.3) 0%, rgba(118, 118, 118, 0.16) 48%, rgba(92, 92, 92, 0.06) 68%, transparent 82%) !important;
+  box-shadow: 0 0 26px 12px rgba(132, 132, 132, 0.22), 0 0 68px 34px rgba(108, 108, 108, 0.12) !important;
+  color: transparent;
+}
+
+/* Light mode - booking date icon */
+body.theme-light .booking-date-icon {
+  color: #401a58;
+}
+
+body.theme-light .booking-date-icon:hover {
+  color: #4a3a34;
+}

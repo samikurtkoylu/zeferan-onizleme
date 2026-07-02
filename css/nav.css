@@ -1,0 +1,297 @@
+/* ===================================
+   NAVIGATION — Nav, Lang, Mobile, Limelight
+   =================================== */
+
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  padding: 1.5rem 3rem;
+  transition: background 0.4s ease, padding 0.4s ease;
+}
+
+.nav.scrolled {
+  background: rgba(10, 10, 10, 0.92);
+  backdrop-filter: blur(20px);
+  padding: 1rem 3rem;
+}
+
+.nav-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-logo {
+  display: flex;
+  align-items: center;
+}
+
+.nav-logo-img {
+  height: 56px;
+  width: auto;
+}
+
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+  position: relative;
+}
+
+.nav-links a {
+  font-size: 0.8rem;
+  font-weight: 400;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--cream-dim);
+  transition: color 0.3s ease;
+  position: relative;
+}
+
+.nav-links a:hover {
+  color: var(--gold-light);
+}
+
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: var(--gold);
+  transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+.nav-cta {
+  border: 1px solid var(--gold-dark) !important;
+  padding: 0.6rem 1.5rem !important;
+  transition: all 0.3s ease !important;
+}
+
+.nav-cta:hover {
+  background: var(--gold) !important;
+  color: var(--black) !important;
+}
+
+.nav-cta::after {
+  display: none !important;
+}
+
+/* Phone link in nav */
+.nav-phone {
+  font-family: var(--font-sans);
+  font-size: 0.78rem;
+  letter-spacing: 0.05em;
+  color: var(--gold) !important;
+  white-space: nowrap;
+  padding-left: 0.5rem;
+  border-left: 1px solid var(--dark-border);
+  transition: color 0.3s ease;
+}
+
+.nav-phone:hover {
+  color: var(--gold-light) !important;
+}
+
+.nav-phone::after {
+  display: none !important;
+}
+
+/* Phone link in mobile menu */
+.mobile-menu-phone {
+  font-family: var(--font-sans);
+  font-size: 1.1rem !important;
+  letter-spacing: 0.05em;
+  color: var(--gold) !important;
+  margin-top: 1.5rem;
+  padding: 0.7rem 1.4rem;
+  border: 1px solid var(--gold-dark);
+  border-radius: 4px;
+}
+
+@media (max-width: 900px) {
+  .nav-phone { display: none; }
+}
+
+/* Language Dropdown */
+.lang-dropdown {
+  position: relative;
+  margin-left: 1rem;
+  z-index: 100;
+}
+
+.lang-current {
+  background: none;
+  border: 1px solid var(--dark-border);
+  padding: 0.4rem 0.7rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  font-family: var(--font-sans);
+  font-size: 0.7rem;
+  letter-spacing: 0.1em;
+  font-weight: 500;
+  transition: border-color 0.3s ease;
+  color: var(--gold);
+}
+
+.lang-current:hover {
+  border-color: var(--gold-dark);
+}
+
+.lang-arrow {
+  transition: transform 0.3s ease;
+  color: var(--text-dim);
+}
+
+.lang-dropdown.open .lang-arrow {
+  transform: rotate(180deg);
+}
+
+.lang-menu {
+  position: absolute;
+  top: calc(100% + 0.35rem);
+  right: 0;
+  background: rgba(30, 10, 46, 0.92);
+  backdrop-filter: blur(14px) saturate(1.2);
+  -webkit-backdrop-filter: blur(14px) saturate(1.2);
+  border: 1px solid rgba(128, 80, 180, 0.35);
+  border-radius: 4px;
+  display: none;
+  flex-direction: column;
+  min-width: 100%;
+  overflow: hidden;
+  box-shadow: 0 10px 28px rgba(0,0,0,0.55);
+}
+
+.lang-dropdown.open .lang-menu {
+  display: flex;
+}
+
+.lang-menu .lang-option {
+  background: none;
+  border: none;
+  padding: 0.5rem 0.8rem;
+  font-family: var(--font-sans);
+  font-size: 0.7rem;
+  letter-spacing: 0.1em;
+  font-weight: 500;
+  color: var(--text-dim);
+  cursor: pointer;
+  text-align: left;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.lang-menu .lang-option:hover {
+  background: rgba(255,255,255,0.05);
+  color: var(--gold);
+}
+
+.lang-menu .lang-option.active {
+  color: var(--gold);
+}
+
+/* Hamburger Toggle */
+.nav-toggle {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  width: 28px;
+  height: 20px;
+  position: relative;
+  z-index: 110;
+}
+
+.nav-toggle span {
+  display: block;
+  width: 100%;
+  height: 1px;
+  background: var(--cream);
+  position: absolute;
+  left: 0;
+  transition: all 0.3s ease;
+}
+
+.nav-toggle span:first-child { top: 4px; }
+.nav-toggle span:last-child { bottom: 4px; }
+
+.nav-toggle.active span:first-child {
+  top: 50%;
+  transform: rotate(45deg);
+}
+
+.nav-toggle.active span:last-child {
+  bottom: 50%;
+  transform: rotate(-45deg);
+}
+
+/* Mobile Menu */
+.mobile-menu {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: var(--black);
+  z-index: 99;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.4s ease;
+}
+
+.mobile-menu.active {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.mobile-menu a {
+  font-family: var(--font-display);
+  font-size: 2rem;
+  color: var(--cream);
+  transition: color 0.3s ease;
+}
+
+.mobile-menu a:hover {
+  color: var(--gold);
+}
+
+/* Nav Limelight */
+.nav-limelight {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 30px;
+  height: 2px;
+  background: var(--gold);
+  border-radius: 1px;
+  opacity: 0;
+  transition: left 0.35s ease, width 0.35s ease, opacity 0.25s ease;
+  pointer-events: none;
+  box-shadow: 0 4px 12px var(--gold), 0 0 20px rgba(196, 162, 101, 0.3);
+}
+
+.nav-links:hover .nav-limelight {
+  opacity: 1;
+}
+
+/* Nav Decrypt Text Effect */
+.nav-links a .nav-text-decrypt {
+  font-family: var(--font-sans);
+}

@@ -1,0 +1,262 @@
+/* ===================================
+   RITUALS — Heritage Hospitality Layer
+   =================================== */
+
+.rituals {
+  position: relative;
+  padding: 7rem 3rem 10rem;
+  background:
+    linear-gradient(180deg, var(--black) 0%, rgba(28, 18, 18, 0.96) 55%, var(--black) 100%);
+  overflow: hidden;
+}
+
+.rituals::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(90deg, rgba(196, 162, 101, 0.06), transparent 28%, transparent 72%, rgba(122, 88, 58, 0.08)),
+    repeating-linear-gradient(90deg, rgba(255,255,255,0.018) 0 1px, transparent 1px 96px);
+  pointer-events: none;
+}
+
+.rituals-inner {
+  position: relative;
+  z-index: 1;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 0.86fr 1.14fr;
+  gap: 4rem;
+  align-items: start;
+}
+
+.rituals-copy {
+  position: sticky;
+  top: 7rem;
+}
+
+.rituals-heading {
+  font-family: var(--font-display);
+  font-size: clamp(2.1rem, 3.6vw, 3.35rem);
+  font-weight: 400;
+  line-height: 1.16;
+  color: var(--cream);
+  margin-bottom: 1.5rem;
+}
+
+.rituals-heading em {
+  font-style: italic;
+  color: var(--gold-light);
+}
+
+.rituals-intro {
+  max-width: 34rem;
+  font-family: var(--font-serif);
+  font-size: 1.05rem;
+  font-weight: 300;
+  line-height: 1.85;
+  color: var(--cream-dim);
+}
+
+.ritual-proof-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.7rem;
+  margin-top: 2rem;
+}
+
+.ritual-proof-row span {
+  border: 1px solid rgba(196, 162, 101, 0.22);
+  border-radius: 999px;
+  padding: 0.65rem 0.9rem;
+  color: var(--gold-light);
+  background: rgba(196, 162, 101, 0.055);
+  font-size: 0.66rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.ritual-stage {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 1.5rem;
+}
+
+.ritual-hero-card {
+  position: relative;
+  margin: 0;
+  min-height: 440px;
+  border: 1px solid rgba(196, 162, 101, 0.22);
+  border-radius: 8px;
+  overflow: hidden;
+  background: var(--dark);
+  box-shadow: 0 28px 80px rgba(0, 0, 0, 0.34);
+}
+
+.ritual-hero-card img {
+  position: absolute;
+  inset: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: saturate(0.95) contrast(1.04);
+  transition: transform 0.7s ease, filter 0.7s ease;
+}
+
+.ritual-hero-card::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: linear-gradient(to top, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.4) 45%, rgba(0,0,0,0.2) 75%, rgba(0,0,0,0.15) 100%);
+}
+
+.ritual-hero-card:hover img {
+  transform: scale(1.045);
+  filter: saturate(1.04) contrast(1.06) brightness(1.04);
+}
+
+.ritual-hero-card figcaption {
+  position: absolute;
+  left: 1.5rem;
+  right: 1.5rem;
+  bottom: 1.5rem;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: 1rem;
+  color: var(--cream);
+  z-index: 1;
+}
+
+.ritual-hero-card figcaption span {
+  font-size: 0.62rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--gold-light);
+}
+
+.ritual-hero-card figcaption strong {
+  max-width: 17rem;
+  text-align: right;
+  font-family: var(--font-display);
+  font-size: clamp(1.2rem, 2vw, 1.7rem);
+  font-weight: 400;
+  line-height: 1.25;
+}
+
+.ritual-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1px;
+  background: var(--dark-border);
+  border: 1px solid var(--dark-border);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.ritual-item {
+  min-height: 220px;
+  padding: 1.35rem;
+  background: rgba(17, 17, 17, 0.94);
+  transition: background 0.35s ease, transform 0.35s ease;
+}
+
+.ritual-item:hover {
+  background: var(--dark-surface);
+}
+
+.ritual-number {
+  display: block;
+  margin-bottom: 1.4rem;
+  font-family: var(--font-display);
+  font-size: 0.85rem;
+  color: var(--gold);
+}
+
+.ritual-item h3 {
+  margin-bottom: 0.75rem;
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: var(--cream);
+}
+
+.ritual-item p {
+  font-family: var(--font-serif);
+  font-size: 0.92rem;
+  font-weight: 300;
+  line-height: 1.75;
+  color: var(--text-dim);
+}
+
+body.theme-light .rituals {
+  background:
+    linear-gradient(180deg, var(--black) 0%, #efe7dc 55%, var(--black) 100%);
+}
+
+body.theme-light .rituals::before {
+  background:
+    linear-gradient(90deg, rgba(64, 26, 88, 0.05), transparent 28%, transparent 72%, rgba(160, 130, 109, 0.12)),
+    repeating-linear-gradient(90deg, rgba(64, 26, 88, 0.045) 0 1px, transparent 1px 96px);
+}
+
+body.theme-light .ritual-item {
+  background: rgba(237, 232, 224, 0.94);
+}
+
+body.theme-light .ritual-item:hover {
+  background: rgba(229, 224, 216, 0.98);
+}
+
+@media (max-width: 1024px) {
+  .rituals-inner {
+    grid-template-columns: 1fr;
+  }
+
+  .rituals-copy {
+    position: static;
+  }
+}
+
+@media (max-width: 768px) {
+  .rituals {
+    padding: 6rem 1.5rem 8rem;
+  }
+
+  .rituals-copy {
+    text-align: center;
+  }
+
+  .rituals-intro {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .ritual-proof-row {
+    justify-content: center;
+  }
+
+  .ritual-hero-card {
+    min-height: 360px;
+  }
+
+  .ritual-hero-card figcaption {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .ritual-hero-card figcaption strong {
+    text-align: left;
+  }
+
+  .ritual-list {
+    grid-template-columns: 1fr;
+  }
+
+  .ritual-item {
+    min-height: auto;
+  }
+}
