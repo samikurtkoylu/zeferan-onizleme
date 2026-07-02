@@ -267,16 +267,6 @@
   color: var(--gold-light);
 }
 
-/* Short descriptive overlays (replaced the old kicker+title pairs) */
-.scroll-text--body { max-width: min(34rem, 44vw); }
-.scroll-text--body h2 {
-  font-size: clamp(1.3rem, 2.2vw, 2rem);
-  line-height: 1.45;
-}
-@media (max-width: 768px) {
-  .scroll-text--body { max-width: 80vw; }
-}
-
 @media (orientation: portrait) {
   .scroll-canvas-wrapper {
     --scroll-media-scale: 1;
