@@ -68,7 +68,7 @@ const translations = {
 /* ─────────────── Language switcher ─────────────── */
 
 const LANG_STORAGE_KEY = 'zeferan-lang';
-const SUPPORTED_LANGS  = ['en', 'tr', 'az'];
+const SUPPORTED_LANGS  = ['en', 'tr', 'az', 'ru'];
 const DEFAULT_LANG     = 'en';
 
 function resolveKey(dict, path) {

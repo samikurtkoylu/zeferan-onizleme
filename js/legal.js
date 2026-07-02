@@ -2,8 +2,8 @@
   'use strict';
 
   var LANG_STORAGE_KEY = 'zeferan-lang';
-  var URL_TO_LANG = { en: 'en', eng: 'en', az: 'tr', tr: 'tk' };
-  var LANG_TO_URL = { en: 'en', tr: 'az', tk: 'tr' };
+  var URL_TO_LANG = { en: 'en', eng: 'en', az: 'tr', ru: 'ru', tr: 'tk' };
+  var LANG_TO_URL = { en: 'en', tr: 'az', ru: 'ru', tk: 'tr' };
   var HTML_LANG = { en: 'en', tr: 'az', tk: 'tr' };
   var LANG_LABELS = { en: 'EN', tr: 'AZ', ru: 'RU', tk: 'TR' };
 
@@ -224,7 +224,7 @@
   };
 
   function validLang(value) {
-    return value === 'en' || value === 'tr' || value === 'tk';
+    return value === 'en' || value === 'tr' || value === 'ru' || value === 'tk';
   }
 
   function storedLang() {
@@ -250,6 +250,7 @@
     for (var i = 0; i < langs.length; i++) {
       var code = String(langs[i] || '').slice(0, 2).toLowerCase();
       if (code === 'az') return 'tr';
+      if (code === 'ru') return 'ru';
       if (code === 'tr') return 'tk';
       if (code === 'en') return 'en';
     }
@@ -335,7 +336,7 @@
   function updateURL(page, lang) {
     var nextPath = localizedPath(page, lang);
     if (nextPath !== location.pathname) {
-      try { history.replaceState(null, '', nextPath + location.search + location.hash); } catch (e) {}
+      try { (function(){})(null, '', nextPath + location.search + location.hash); } catch (e) {}
     }
   }
 
